@@ -1,0 +1,64 @@
+2021-02-06T07:19:23+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Order starts in 90 seconds :: obj_id 23298
+2021-02-06T07:19:25+00:00 NOTICE debug :: Order ID 23298 was processing and is now completed :: Array
+(
+    [new_order] => 
+    [tracking] => 
+)
+
+2021-02-06T07:21:18+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Order starts in 90 seconds :: obj_id 23300
+2021-02-06T07:21:19+00:00 NOTICE debug :: Order ID 23300 was processing and is now completed :: Array
+(
+    [new_order] => 
+    [tracking] => 
+)
+
+2021-02-06T07:21:38+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Order starts in 90 seconds :: obj_id 23301
+2021-02-06T07:21:39+00:00 NOTICE debug :: Order ID 23301 was processing and is now completed :: Array
+(
+    [new_order] => 
+    [tracking] => 
+)
+
+2021-02-06T07:21:43+00:00 NOTICE order.member.updated :: Updated jingren126@gmail.com subscriber status to transactional and language to 
+2021-02-06T07:21:43+00:00 NOTICE order_submit.success :: updateStoreOrder :: #23298 :: email: jingren126@gmail.com
+2021-02-06T07:24:04+00:00 NOTICE order.member.updated :: Updated alwinyu@hotmail.com subscriber status to subscribed and language to 
+2021-02-06T07:24:04+00:00 NOTICE order_submit.success :: updateStoreOrder :: #23300 :: email: alwinyu@hotmail.com
+2021-02-06T07:24:08+00:00 NOTICE order.member.updated :: Updated nicvkh87@gmail.com subscriber status to transactional and language to 
+2021-02-06T07:24:08+00:00 NOTICE order_submit.success :: updateStoreOrder :: #23301 :: email: nicvkh87@gmail.com
+2021-02-06T11:03:02+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Cart_Update queued :: obj_id 65af16ceae297d360a590ccd6a267f93
+2021-02-06T11:03:07+00:00 NOTICE abandoned_cart.success :: email: 96shen@gmail.com :: checkout_url: https://warmwishesflorist.com/checkout/?mc_cart_id=65af16ceae297d360a590ccd6a267f93
+2021-02-06T11:03:08+00:00 NOTICE cart.member.updated :: Updated 96shen@gmail.com subscriber status to transactional and language to en
+2021-02-06T14:18:28+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 11348
+2021-02-06T14:27:54+00:00 NOTICE member.sync :: Subscribed Member sandi.boluchevskaya@mail.ru :: Array
+(
+    [status_if_new] => 1
+    [merge_fields] => Array
+        (
+        )
+
+)
+
+2021-02-06T14:58:15+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 11349
+2021-02-06T15:01:06+00:00 NOTICE member.sync :: Subscribed Member laima.dikopolova@mail.ru :: Array
+(
+    [status_if_new] => 1
+    [merge_fields] => Array
+        (
+        )
+
+)
+
+2021-02-06T15:16:22+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 11350
+2021-02-06T15:16:43+00:00 NOTICE member.sync :: ramiza.pakhmutova@mail.ru has signed up to a lot of lists very recently; we're not allowing more signups for now
+2021-02-06T16:28:22+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 11351
+2021-02-06T16:29:13+00:00 NOTICE member.sync :: neyshn.ardankina@mail.ru has signed up to a lot of lists very recently; we're not allowing more signups for now
+2021-02-06T17:41:58+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 11352
+2021-02-06T17:42:46+00:00 NOTICE member.sync :: vsevlada.indik@mail.ru has signed up to a lot of lists very recently; we're not allowing more signups for now
+2021-02-06T19:35:04+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 11353
+2021-02-06T19:36:33+00:00 NOTICE member.sync :: mabgusa.rakityanskaya.99@mail.ru has signed up to a lot of lists very recently; we're not allowing more signups for now
+2021-02-06T19:50:08+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 11354
+2021-02-06T19:55:07+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 11355
+2021-02-06T20:01:06+00:00 NOTICE member.sync :: salina.yurakina.77@mail.ru has signed up to a lot of lists very recently; we're not allowing more signups for now
+2021-02-06T20:01:07+00:00 NOTICE member.sync :: moudin.sergunina@mail.ru has signed up to a lot of lists very recently; we're not allowing more signups for now
+2021-02-06T21:57:02+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 11356
+2021-02-06T22:01:06+00:00 NOTICE member.sync :: leta.arzamastseva.90@mail.ru has signed up to a lot of lists very recently; we're not allowing more signups for now

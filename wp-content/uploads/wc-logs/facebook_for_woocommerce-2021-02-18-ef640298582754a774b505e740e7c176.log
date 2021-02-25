@@ -1,0 +1,2 @@
+02-18-2021 @ 09:12:50 - There was an error trying to find the IDs for Product Items in the Product Group 4742267142511595: GraphMethodException: Unsupported get request. Object with ID '4742267142511595' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api
+02-18-2021 @ 22:39:08 - Retrieving page access token

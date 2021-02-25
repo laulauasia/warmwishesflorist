@@ -1,0 +1,295 @@
+2021-02-19T00:01:06+00:00 NOTICE member.sync :: rashaka.mustafayeva.87@mail.ru has signed up to a lot of lists very recently; we're not allowing more signups for now
+2021-02-19T01:32:10+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Cart_Update queued :: obj_id e913b65d9c1e30371560585335e938e0
+2021-02-19T01:32:13+00:00 NOTICE abandoned_cart.success :: email: renatii.kong@lemonskystudios.com :: checkout_url: https://warmwishesflorist.com/checkout/?mc_cart_id=e913b65d9c1e30371560585335e938e0
+2021-02-19T01:32:14+00:00 NOTICE cart.member.updated :: Updated renatii.kong@lemonskystudios.com subscriber status to transactional and language to en
+2021-02-19T02:03:53+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Order starts in 90 seconds :: obj_id 23439
+2021-02-19T02:08:01+00:00 NOTICE debug :: Order ID 23439 was pending and is now processing :: Array
+(
+    [new_order] => 1
+    [tracking] => Array
+        (
+            [campaign_id] => 
+            [landing_site] => https://warmwishesflorist.com/?wc-api=WC_Molpay_Gateway
+        )
+
+)
+
+2021-02-19T02:11:06+00:00 NOTICE order.member.updated :: Updated renatii.kong@lemonskystudios.com subscriber status to transactional and language to en
+2021-02-19T02:11:06+00:00 NOTICE order_submit.success :: addStoreOrder :: #23439 :: email: renatii.kong@lemonskystudios.com :: landing site https://warmwishesflorist.com/ :: abandoned cart deleted [e913b65d9c1e30371560585335e938e0]
+2021-02-19T02:46:56+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Cart_Update queued :: obj_id 08a9a05347312eac8cf645e0f97e4e00
+2021-02-19T02:46:57+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 12107
+2021-02-19T02:47:00+00:00 NOTICE abandoned_cart.success :: email: michelle.ngsookling@hotmail.com :: checkout_url: https://warmwishesflorist.com/checkout/?mc_cart_id=08a9a05347312eac8cf645e0f97e4e00
+2021-02-19T02:47:01+00:00 NOTICE cart.member.updated :: Updated michelle.ngsookling@hotmail.com subscriber status to subscribed and language to en
+2021-02-19T02:47:03+00:00 NOTICE member.sync :: Updated Member michelle.ngsookling@hotmail.com ( merge fields only ) :: Array
+(
+    [merge_fields] => Array
+        (
+        )
+
+)
+
+2021-02-19T03:07:02+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 23337
+2021-02-19T03:08:01+00:00 NOTICE product_submit.success :: updateStoreProduct :: #23337
+2021-02-19T03:12:41+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 402
+2021-02-19T03:14:12+00:00 NOTICE member.sync :: Updated Member calex806@hotmail.com ( merge fields only ) :: Array
+(
+    [merge_fields] => Array
+        (
+            [FNAME] => Lei Zhun
+            [LNAME] => Chong
+        )
+
+)
+
+2021-02-19T05:19:55+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 12108
+2021-02-19T05:21:32+00:00 NOTICE member.sync :: atominfoo@seoray.site has signed up to a lot of lists very recently; we're not allowing more signups for now
+2021-02-19T05:28:51+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 23337
+2021-02-19T05:30:46+00:00 NOTICE product_submit.success :: updateStoreProduct :: #23337
+2021-02-19T05:43:27+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 23272
+2021-02-19T05:43:37+00:00 NOTICE product.deleted :: deleted product 23281
+2021-02-19T05:44:03+00:00 NOTICE product_submit.success :: updateStoreProduct :: #23272
+2021-02-19T05:44:30+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 23288
+2021-02-19T05:46:54+00:00 NOTICE product_submit.success :: updateStoreProduct :: #23288
+2021-02-19T05:47:49+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 23205
+2021-02-19T05:48:33+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 23199
+2021-02-19T05:49:24+00:00 NOTICE product_submit.success :: updateStoreProduct :: #23205
+2021-02-19T05:49:25+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 23194
+2021-02-19T05:49:25+00:00 NOTICE product_submit.success :: updateStoreProduct :: #23199
+2021-02-19T05:49:32+00:00 NOTICE product_submit.success :: updateStoreProduct :: #23194
+2021-02-19T05:49:47+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 23188
+2021-02-19T05:50:10+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 23187
+2021-02-19T05:50:25+00:00 NOTICE product_submit.success :: updateStoreProduct :: #23188
+2021-02-19T05:50:26+00:00 NOTICE product_submit.success :: updateStoreProduct :: #23187
+2021-02-19T05:50:38+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 23186
+2021-02-19T05:50:53+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 23185
+2021-02-19T05:52:38+00:00 NOTICE product_submit.success :: updateStoreProduct :: #23186
+2021-02-19T05:52:39+00:00 NOTICE product_submit.success :: updateStoreProduct :: #23185
+2021-02-19T05:54:07+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 12109
+2021-02-19T05:54:14+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 12110
+2021-02-19T05:55:13+00:00 NOTICE member.sync :: Subscribed Member biz.bon.sity@seoray.site :: Array
+(
+    [status_if_new] => 1
+    [merge_fields] => Array
+        (
+        )
+
+)
+
+2021-02-19T05:55:14+00:00 NOTICE member.sync :: Subscribed Member seolovin@seoray.site :: Array
+(
+    [status_if_new] => 1
+    [merge_fields] => Array
+        (
+        )
+
+)
+
+2021-02-19T06:25:55+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 23116
+2021-02-19T06:26:16+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 23138
+2021-02-19T06:26:39+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 23178
+2021-02-19T06:26:40+00:00 NOTICE product_submit.success :: updateStoreProduct :: #23116
+2021-02-19T06:26:40+00:00 NOTICE product_submit.success :: updateStoreProduct :: #23138
+2021-02-19T06:26:47+00:00 NOTICE product_submit.success :: updateStoreProduct :: #23178
+2021-02-19T06:27:00+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 23178
+2021-02-19T06:27:08+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 23185
+2021-02-19T06:27:21+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 23186
+2021-02-19T06:27:31+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 23187
+2021-02-19T06:27:44+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 23188
+2021-02-19T06:27:47+00:00 NOTICE product_submit.success :: updateStoreProduct :: #23178
+2021-02-19T06:27:48+00:00 NOTICE product_submit.success :: updateStoreProduct :: #23185
+2021-02-19T06:27:49+00:00 NOTICE product_submit.success :: updateStoreProduct :: #23186
+2021-02-19T06:27:49+00:00 NOTICE product_submit.success :: updateStoreProduct :: #23187
+2021-02-19T06:27:50+00:00 NOTICE product_submit.success :: updateStoreProduct :: #23188
+2021-02-19T06:27:53+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 23194
+2021-02-19T06:28:07+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 23199
+2021-02-19T06:28:24+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 23205
+2021-02-19T06:28:44+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 23177
+2021-02-19T06:28:55+00:00 NOTICE product_submit.success :: updateStoreProduct :: #23194
+2021-02-19T06:28:56+00:00 NOTICE product_submit.success :: updateStoreProduct :: #23199
+2021-02-19T06:28:56+00:00 NOTICE product_submit.success :: updateStoreProduct :: #23205
+2021-02-19T06:28:57+00:00 NOTICE product_submit.success :: updateStoreProduct :: #23177
+2021-02-19T06:28:58+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 23178
+2021-02-19T06:29:08+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 23288
+2021-02-19T06:30:23+00:00 NOTICE product_submit.success :: updateStoreProduct :: #23178
+2021-02-19T06:30:23+00:00 NOTICE product_submit.success :: updateStoreProduct :: #23288
+2021-02-19T06:30:56+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 23170
+2021-02-19T06:31:05+00:00 NOTICE product_submit.success :: updateStoreProduct :: #23170
+2021-02-19T06:31:29+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 23169
+2021-02-19T06:31:41+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 23170
+2021-02-19T06:32:02+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 23167
+2021-02-19T06:32:19+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 23177
+2021-02-19T06:32:41+00:00 NOTICE product_submit.success :: updateStoreProduct :: #23167
+2021-02-19T06:32:42+00:00 NOTICE product_submit.success :: updateStoreProduct :: #23169
+2021-02-19T06:32:43+00:00 NOTICE product_submit.success :: updateStoreProduct :: #23177
+2021-02-19T06:32:43+00:00 NOTICE product_submit.success :: updateStoreProduct :: #23170
+2021-02-19T06:33:06+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 23158
+2021-02-19T06:33:26+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 23157
+2021-02-19T06:34:07+00:00 NOTICE product_submit.success :: updateStoreProduct :: #23157
+2021-02-19T06:34:08+00:00 NOTICE product_submit.success :: updateStoreProduct :: #23158
+2021-02-19T06:34:09+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 22922
+2021-02-19T06:34:36+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 22940
+2021-02-19T06:34:55+00:00 NOTICE product_submit.success :: updateStoreProduct :: #22940
+2021-02-19T06:35:01+00:00 NOTICE product_submit.success :: updateStoreProduct :: #22922
+2021-02-19T06:38:58+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 22947
+2021-02-19T06:39:13+00:00 NOTICE product_submit.success :: updateStoreProduct :: #22947
+2021-02-19T06:39:30+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 22973
+2021-02-19T06:39:41+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 22976
+2021-02-19T06:40:14+00:00 NOTICE product_submit.success :: updateStoreProduct :: #22973
+2021-02-19T06:40:14+00:00 NOTICE product_submit.success :: updateStoreProduct :: #22976
+2021-02-19T06:41:00+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 22976
+2021-02-19T06:41:14+00:00 NOTICE product_submit.success :: updateStoreProduct :: #22976
+2021-02-19T06:43:09+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 22976
+2021-02-19T06:44:27+00:00 NOTICE product_submit.success :: updateStoreProduct :: #22976
+2021-02-19T06:45:21+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 23210
+2021-02-19T06:45:31+00:00 NOTICE product_submit.success :: updateStoreProduct :: #23210
+2021-02-19T06:46:06+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 23252
+2021-02-19T06:46:34+00:00 NOTICE product_submit.success :: updateStoreProduct :: #23252
+2021-02-19T06:47:46+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 23252
+2021-02-19T06:48:50+00:00 NOTICE product_submit.success :: updateStoreProduct :: #23252
+2021-02-19T06:51:51+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 23062
+2021-02-19T06:52:00+00:00 NOTICE product_submit.success :: updateStoreProduct :: #23062
+2021-02-19T06:54:56+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 23059
+2021-02-19T06:55:14+00:00 NOTICE product_submit.success :: updateStoreProduct :: #23059
+2021-02-19T06:57:25+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 23047
+2021-02-19T06:58:43+00:00 NOTICE product_submit.success :: updateStoreProduct :: #23047
+2021-02-19T06:59:02+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 23047
+2021-02-19T06:59:31+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 23042
+2021-02-19T06:59:49+00:00 NOTICE product_submit.success :: updateStoreProduct :: #23047
+2021-02-19T06:59:50+00:00 NOTICE product_submit.success :: updateStoreProduct :: #23042
+2021-02-19T07:00:09+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 23039
+2021-02-19T07:00:27+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 22947
+2021-02-19T07:01:06+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 22987
+2021-02-19T07:01:09+00:00 NOTICE product_submit.success :: updateStoreProduct :: #23039
+2021-02-19T07:01:10+00:00 NOTICE product_submit.success :: updateStoreProduct :: #22947
+2021-02-19T07:01:12+00:00 NOTICE product_submit.success :: updateStoreProduct :: #22987
+2021-02-19T07:01:33+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 22989
+2021-02-19T07:02:11+00:00 NOTICE product_submit.success :: updateStoreProduct :: #22989
+2021-02-19T07:02:38+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 23008
+2021-02-19T07:03:33+00:00 NOTICE product_submit.success :: updateStoreProduct :: #23008
+2021-02-19T07:05:15+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 23138
+2021-02-19T07:05:38+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 23188
+2021-02-19T07:05:48+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 23187
+2021-02-19T07:05:58+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 23186
+2021-02-19T07:06:07+00:00 NOTICE product_submit.success :: updateStoreProduct :: #23138
+2021-02-19T07:06:07+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 23199
+2021-02-19T07:06:07+00:00 NOTICE product_submit.success :: updateStoreProduct :: #23188
+2021-02-19T07:06:08+00:00 NOTICE product_submit.success :: updateStoreProduct :: #23187
+2021-02-19T07:06:09+00:00 NOTICE product_submit.success :: updateStoreProduct :: #23186
+2021-02-19T07:06:16+00:00 NOTICE product_submit.success :: updateStoreProduct :: #23199
+2021-02-19T07:06:43+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 23024
+2021-02-19T07:07:04+00:00 NOTICE product_submit.success :: updateStoreProduct :: #23024
+2021-02-19T07:07:22+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 23106
+2021-02-19T07:09:36+00:00 NOTICE product_submit.success :: updateStoreProduct :: #23106
+2021-02-19T11:05:03+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Cart_Update queued :: obj_id 2f423123f94eb9fc7d520c85ce564519
+2021-02-19T11:05:05+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 12111
+2021-02-19T11:05:10+00:00 NOTICE abandoned_cart.success :: email: rajansharma14@hotmail.com :: checkout_url: https://warmwishesflorist.com/checkout/?mc_cart_id=2f423123f94eb9fc7d520c85ce564519
+2021-02-19T11:05:11+00:00 NOTICE cart.member.updated :: Updated rajansharma14@hotmail.com subscriber status to transactional and language to en
+2021-02-19T11:05:12+00:00 NOTICE member.sync :: Updated Member rajansharma14@hotmail.com :: Array
+(
+    [previous_status] => transactional
+    [status] => 1
+    [merge_fields] => Array
+        (
+        )
+
+)
+
+2021-02-19T11:12:16+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 12111
+2021-02-19T11:12:16+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Order starts in 90 seconds :: obj_id 23440
+2021-02-19T11:13:18+00:00 NOTICE debug :: Order ID 23440 was pending and is now processing :: Array
+(
+    [new_order] => 1
+    [tracking] => Array
+        (
+            [campaign_id] => 
+            [landing_site] => https://warmwishesflorist.com/
+        )
+
+)
+
+2021-02-19T11:18:12+00:00 NOTICE order.member.updated :: Updated rajansharma14@hotmail.com subscriber status to subscribed and language to en
+2021-02-19T11:18:12+00:00 NOTICE order_submit.success :: addStoreOrder :: #23440 :: email: rajansharma14@hotmail.com :: landing site https://warmwishesflorist.com/ :: abandoned cart deleted [2f423123f94eb9fc7d520c85ce564519]
+2021-02-19T11:18:13+00:00 NOTICE member.sync :: Updated Member rajansharma14@hotmail.com ( merge fields only ) :: Array
+(
+    [merge_fields] => Array
+        (
+            [FNAME] => Mona
+            [LNAME] => J
+        )
+
+)
+
+2021-02-19T11:27:05+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 12112
+2021-02-19T11:33:51+00:00 NOTICE member.sync :: Updated Member 123teatr@gmail.com ( merge fields only ) :: Array
+(
+    [merge_fields] => Array
+        (
+        )
+
+)
+
+2021-02-19T13:15:34+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 12113
+2021-02-19T13:16:20+00:00 NOTICE member.sync :: Updated Member pinupcasino111@gmail.com ( merge fields only ) :: Array
+(
+    [merge_fields] => Array
+        (
+        )
+
+)
+
+2021-02-19T13:16:21+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Order starts in 90 seconds :: obj_id 23439
+2021-02-19T13:16:21+00:00 NOTICE debug :: Order ID 23439 was processing and is now completed :: Array
+(
+    [new_order] => 
+    [tracking] => 
+)
+
+2021-02-19T13:16:30+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Order starts in 90 seconds :: obj_id 23436
+2021-02-19T13:16:31+00:00 NOTICE debug :: Order ID 23436 was processing and is now completed :: Array
+(
+    [new_order] => 
+    [tracking] => 
+)
+
+2021-02-19T13:18:51+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Order starts in 90 seconds :: obj_id 23437
+2021-02-19T13:18:52+00:00 NOTICE debug :: Order ID 23437 was processing and is now completed :: Array
+(
+    [new_order] => 
+    [tracking] => 
+)
+
+2021-02-19T13:18:54+00:00 NOTICE order.member.updated :: Updated renatii.kong@lemonskystudios.com subscriber status to transactional and language to 
+2021-02-19T13:18:54+00:00 NOTICE order_submit.success :: updateStoreOrder :: #23439 :: email: renatii.kong@lemonskystudios.com
+2021-02-19T13:18:58+00:00 NOTICE order.member.updated :: Updated whitecuppacake@gmail.com subscriber status to transactional and language to 
+2021-02-19T13:18:58+00:00 NOTICE order_submit.success :: updateStoreOrder :: #23436 :: email: whitecuppacake@gmail.com
+2021-02-19T13:18:59+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Order starts in 90 seconds :: obj_id 23440
+2021-02-19T13:19:00+00:00 NOTICE debug :: Order ID 23440 was processing and is now completed :: Array
+(
+    [new_order] => 
+    [tracking] => 
+)
+
+2021-02-19T13:43:28+00:00 NOTICE order.member.updated :: Updated tgshyen@gmail.com subscriber status to subscribed and language to 
+2021-02-19T13:43:28+00:00 NOTICE order_submit.success :: updateStoreOrder :: #23437 :: email: tgshyen@gmail.com
+2021-02-19T13:43:32+00:00 NOTICE order.member.updated :: Updated rajansharma14@hotmail.com subscriber status to subscribed and language to 
+2021-02-19T13:43:32+00:00 NOTICE order_submit.success :: updateStoreOrder :: #23440 :: email: rajansharma14@hotmail.com
+2021-02-19T16:53:48+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 12114
+2021-02-19T17:04:38+00:00 NOTICE member.sync :: Subscribed Member raminrajo5693@gmail.com :: Array
+(
+    [status_if_new] => 1
+    [merge_fields] => Array
+        (
+        )
+
+)
+
+2021-02-19T20:23:08+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 12115
+2021-02-19T20:48:24+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 12116
+2021-02-19T20:48:34+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 12117
+2021-02-19T20:52:30+00:00 NOTICE member.sync :: saphhar@mulars.ru has signed up to a lot of lists very recently; we're not allowing more signups for now
+2021-02-19T20:52:40+00:00 NOTICE member.sync :: a.danilov@den.efastes.com has signed up to a lot of lists very recently; we're not allowing more signups for now
+2021-02-19T20:52:42+00:00 NOTICE member.sync :: g.nalivkin@max.enersets.com has signed up to a lot of lists very recently; we're not allowing more signups for now
+2021-02-19T21:17:59+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 12118
+2021-02-19T21:18:43+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 12119
+2021-02-19T21:25:31+00:00 NOTICE member.sync :: Please provide a valid email address.
+2021-02-19T21:25:32+00:00 NOTICE member.sync :: andykoviguanta@gmail.com has signed up to a lot of lists very recently; we're not allowing more signups for now

@@ -1,0 +1,65 @@
+2021-01-26T00:06:32+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 11102
+2021-01-26T00:20:42+00:00 NOTICE member.sync :: kuzenkova2022@mail.ru has signed up to a lot of lists very recently; we're not allowing more signups for now
+2021-01-26T01:34:56+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 11103
+2021-01-26T01:42:39+00:00 NOTICE member.sync :: venchana.polovova.63@mail.ru has signed up to a lot of lists very recently; we're not allowing more signups for now
+2021-01-26T02:23:51+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 11104
+2021-01-26T02:31:05+00:00 NOTICE member.sync :: sa.n.d.yar.me.s.m.a.nn@gmail.com has signed up to a lot of lists very recently; we're not allowing more signups for now
+2021-01-26T03:39:44+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 11105
+2021-01-26T03:55:56+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 11106
+2021-01-26T04:01:06+00:00 NOTICE member.sync :: sgebeya@mail.ru has signed up to a lot of lists very recently; we're not allowing more signups for now
+2021-01-26T04:01:07+00:00 NOTICE member.sync :: darlonna.dadayeva@mail.ru has signed up to a lot of lists very recently; we're not allowing more signups for now
+2021-01-26T06:18:08+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 11107
+2021-01-26T06:19:30+00:00 NOTICE member.sync :: ennel.bozhimova@mail.ru has signed up to a lot of lists very recently; we're not allowing more signups for now
+2021-01-26T08:50:04+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Cart_Update queued :: obj_id 47c5fc2c421d5bf0c35398c66d48f0cc
+2021-01-26T08:50:09+00:00 NOTICE abandoned_cart.success :: email: pahalwi@gmail.com :: checkout_url: https://warmwishesflorist.com/checkout/?mc_cart_id=47c5fc2c421d5bf0c35398c66d48f0cc
+2021-01-26T08:50:10+00:00 NOTICE cart.member.updated :: Updated pahalwi@gmail.com subscriber status to transactional and language to en
+2021-01-26T08:55:01+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Order starts in 90 seconds :: obj_id 23089
+2021-01-26T08:57:24+00:00 NOTICE order_sumbit :: #23089 has a financial status of pending and was skipped.
+2021-01-26T08:58:13+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Order starts in 90 seconds :: obj_id 23089
+2021-01-26T08:58:14+00:00 NOTICE debug :: Order ID 23089 was pending and is now processing :: Array
+(
+    [new_order] => 1
+    [tracking] => Array
+        (
+            [campaign_id] => 
+            [landing_site] => https://warmwishesflorist.com/checkout/order-pay/23089/?key=wc_order_DFI8oEfeboTrQ
+        )
+
+)
+
+2021-01-26T09:00:51+00:00 NOTICE order.member.updated :: Updated pahalwi@gmail.com subscriber status to transactional and language to 
+2021-01-26T09:00:51+00:00 NOTICE order_submit.success :: addStoreOrder :: #23089 :: email: pahalwi@gmail.com :: landing site https://warmwishesflorist.com/checkout/order-pay/23089/?key=wc_order_DFI8oEfeboTrQ :: abandoned cart deleted [47c5fc2c421d5bf0c35398c66d48f0cc]
+2021-01-26T11:30:45+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Order starts in 90 seconds :: obj_id 23089
+2021-01-26T11:30:47+00:00 NOTICE debug :: Order ID 23089 was processing and is now completed :: Array
+(
+    [new_order] => 
+    [tracking] => 
+)
+
+2021-01-26T11:37:43+00:00 NOTICE order.member.updated :: Updated pahalwi@gmail.com subscriber status to transactional and language to 
+2021-01-26T11:37:43+00:00 NOTICE order_submit.success :: updateStoreOrder :: #23089 :: email: pahalwi@gmail.com
+2021-01-26T11:39:10+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Order starts in 90 seconds :: obj_id 23076
+2021-01-26T11:39:11+00:00 NOTICE debug :: Order ID 23076 was processing and is now completed :: Array
+(
+    [new_order] => 
+    [tracking] => 
+)
+
+2021-01-26T12:01:08+00:00 NOTICE order.member.updated :: Updated sianmarielow@gmail.com subscriber status to transactional and language to 
+2021-01-26T12:01:08+00:00 NOTICE order_submit.success :: updateStoreOrder :: #23076 :: email: sianmarielow@gmail.com
+2021-01-26T16:31:33+00:00 NOTICE product.deleted :: deleted product 23057
+2021-01-26T16:37:27+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 23047
+2021-01-26T16:39:46+00:00 NOTICE product_submit.success :: updateStoreProduct :: #23047
+2021-01-26T16:53:33+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 23047
+2021-01-26T16:54:40+00:00 NOTICE product_submit.success :: updateStoreProduct :: #23047
+2021-01-26T17:10:26+00:00 NOTICE product.deleted :: deleted product 22995
+2021-01-26T18:00:20+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 11109
+2021-01-26T18:01:06+00:00 NOTICE member.sync :: Subscribed Member volodimerzimurskij@gmail.com :: Array
+(
+    [status_if_new] => 1
+    [merge_fields] => Array
+        (
+        )
+
+)
+

@@ -1,0 +1,101 @@
+2021-02-16T01:51:20+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Order starts in 90 seconds :: obj_id 23420
+2021-02-16T01:51:22+00:00 NOTICE debug :: Order ID 23420 was processing and is now completed :: Array
+(
+    [new_order] => 
+    [tracking] => 
+)
+
+2021-02-16T01:53:49+00:00 NOTICE order.member.updated :: Updated valerie.ong788@gmail.com subscriber status to transactional and language to 
+2021-02-16T01:53:49+00:00 NOTICE order_submit.success :: updateStoreOrder :: #23420 :: email: valerie.ong788@gmail.com
+2021-02-16T01:57:26+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Cart_Update queued :: obj_id 1db649b6555b419a9d16d33debc6cb72
+2021-02-16T01:58:01+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Cart_Update queued :: obj_id 1db649b6555b419a9d16d33debc6cb72
+2021-02-16T01:58:01+00:00 NOTICE abandoned_cart.success :: email: tanhsbc@yahoo.com :: checkout_url: https://warmwishesflorist.com/checkout/?mc_cart_id=1db649b6555b419a9d16d33debc6cb72
+2021-02-16T01:58:02+00:00 NOTICE cart.member.updated :: Updated tanhsbc@yahoo.com subscriber status to subscribed and language to en
+2021-02-16T01:58:03+00:00 NOTICE abandoned_cart.success :: email: tanhsbc@yahoo.com :: checkout_url: https://warmwishesflorist.com/checkout/?mc_cart_id=1db649b6555b419a9d16d33debc6cb72
+2021-02-16T01:58:07+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 11131
+2021-02-16T01:58:10+00:00 NOTICE member.sync :: Updated Member tanhsbc@yahoo.com ( merge fields only ) :: Array
+(
+    [merge_fields] => Array
+        (
+        )
+
+)
+
+2021-02-16T04:27:09+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Cart_Update queued :: obj_id b52abc0fe302c7311229315898cbff67
+2021-02-16T04:27:28+00:00 NOTICE abandoned_cart.success :: email: kit_lu@hotmail.com :: checkout_url: https://warmwishesflorist.com/checkout/?mc_cart_id=b52abc0fe302c7311229315898cbff67
+2021-02-16T04:27:29+00:00 NOTICE cart.member.updated :: Updated kit_lu@hotmail.com subscriber status to transactional and language to en
+2021-02-16T05:10:38+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Cart_Update queued :: obj_id b52abc0fe302c7311229315898cbff67
+2021-02-16T05:10:40+00:00 NOTICE abandoned_cart.success :: email: kit_lu@hotmail.com :: checkout_url: https://warmwishesflorist.com/checkout/?mc_cart_id=b52abc0fe302c7311229315898cbff67
+2021-02-16T05:45:54+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 11746
+2021-02-16T05:47:57+00:00 NOTICE member.sync :: Subscribed Member miki658075@gmail.com :: Array
+(
+    [status_if_new] => 1
+    [merge_fields] => Array
+        (
+        )
+
+)
+
+2021-02-16T06:01:00+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 11746
+2021-02-16T06:01:09+00:00 NOTICE member.sync :: Updated Member miki658075@gmail.com ( merge fields only ) :: Array
+(
+    [merge_fields] => Array
+        (
+        )
+
+)
+
+2021-02-16T06:01:31+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 11746
+2021-02-16T06:05:38+00:00 NOTICE member.sync :: Updated Member miki658075@gmail.com ( merge fields only ) :: Array
+(
+    [merge_fields] => Array
+        (
+        )
+
+)
+
+2021-02-16T07:50:41+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Cart_Update queued :: obj_id 072be30a20be6d49eaf77e1212b49985
+2021-02-16T07:55:04+00:00 NOTICE abandoned_cart.success :: email: shinyingng96@gmail.com :: checkout_url: https://warmwishesflorist.com/checkout/?mc_cart_id=072be30a20be6d49eaf77e1212b49985
+2021-02-16T07:55:05+00:00 NOTICE cart.member.updated :: Updated shinyingng96@gmail.com subscriber status to subscribed and language to en
+2021-02-16T08:02:44+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Order starts in 90 seconds :: obj_id 23421
+2021-02-16T08:04:23+00:00 NOTICE debug :: Order ID 23421 was pending and is now processing :: Array
+(
+    [new_order] => 1
+    [tracking] => Array
+        (
+            [campaign_id] => 
+            [landing_site] => https://warmwishesflorist.com/?wc-api=WC_Molpay_Gateway
+        )
+
+)
+
+2021-02-16T08:06:45+00:00 NOTICE order.member.updated :: Updated shinyingng96@gmail.com subscriber status to subscribed and language to en
+2021-02-16T08:06:45+00:00 NOTICE order_submit.success :: addStoreOrder :: #23421 :: email: shinyingng96@gmail.com :: landing site https://warmwishesflorist.com/ :: abandoned cart deleted [072be30a20be6d49eaf77e1212b49985]
+2021-02-16T11:34:07+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 11747
+2021-02-16T11:42:43+00:00 NOTICE member.sync :: Subscribed Member viktorgonchar1991@list.ru :: Array
+(
+    [status_if_new] => 1
+    [merge_fields] => Array
+        (
+        )
+
+)
+
+2021-02-16T12:59:33+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Cart_Update queued :: obj_id 93e0a40b00e49c0b9d8a738b79061823
+2021-02-16T12:59:51+00:00 NOTICE abandoned_cart.success :: email: tgshyen@gmail.com :: checkout_url: https://warmwishesflorist.com/checkout/?mc_cart_id=93e0a40b00e49c0b9d8a738b79061823
+2021-02-16T12:59:52+00:00 NOTICE cart.member.updated :: Updated tgshyen@gmail.com subscriber status to subscribed and language to en
+2021-02-16T13:00:00+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Cart_Update queued :: obj_id 93e0a40b00e49c0b9d8a738b79061823
+2021-02-16T13:01:07+00:00 NOTICE abandoned_cart.success :: email: tgshyen@gmail.com :: checkout_url: https://warmwishesflorist.com/checkout/?mc_cart_id=93e0a40b00e49c0b9d8a738b79061823
+2021-02-16T17:04:08+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 11748
+2021-02-16T17:16:50+00:00 NOTICE member.sync :: Subscribed Member elkina13562@gmail.com :: Array
+(
+    [status_if_new] => 1
+    [merge_fields] => Array
+        (
+        )
+
+)
+
+2021-02-16T19:17:18+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Cart_Update queued :: obj_id 0a1415507103980bf81cc876ee6c1a0e
+2021-02-16T19:19:08+00:00 NOTICE abandoned_cart.success :: email: rainythia0412@gmail.com :: checkout_url: https://warmwishesflorist.com/checkout/?mc_cart_id=0a1415507103980bf81cc876ee6c1a0e
+2021-02-16T19:19:08+00:00 NOTICE cart.member.updated :: Updated rainythia0412@gmail.com subscriber status to subscribed and language to en
