@@ -301,6 +301,27 @@ jQuery(document).ready(function($) {
     } );
   }
 
+	/* loginpress_footer_date_change LoginPress (Date) Change Footer year on live preview.
+	* @param  id       [ID of Section]
+	* @param  target   [Value of section]
+	* @param  output   [output with added year]
+	* @since 1.5.5
+	*
+	* @return string   [CSS property]
+	*/
+	function loginpress_footer_date_change(id, target, output) {
+		wp.customize(id, function(value) {
+			value.bind(function(loginPressVal) {
+
+			if (loginPressVal == '') {
+				loginpress_find(target).html('');
+			} else {
+				loginpress_find(target).html(output);
+			}
+			});
+		});
+	}
+
   // function for change LoginPress input fields in real time...
   function loginpress_input_property( setting, property ) {
     wp.customize( setting, function( value ) {
@@ -1482,31 +1503,41 @@ jQuery(document).ready(function($) {
 				}
 		});
 	});
+
+	wp.customize('loginpress_customization[login_footer_copy_right]', function(value) {
+		value.bind(function(loginPressVal) {
+			if (loginPressVal == '') {} else {
+				var date = new Date().getFullYear();
+				var s = $('[id="_customize-input-loginpress_customization[login_footer_copy_right]"]').val();
+				const result = s.replace('$YEAR$', date);
+				loginpress_footer_date_change('loginpress_customization[login_footer_copy_right]', '.copyRight', result);
+			}
+		});
+	});
+
   /**
    * Set position of Footer link.
    */
-  wp.customize( 'loginpress_customization[login_copy_right_display]', function( value ) {
-    value.bind( function( loginPressVal ) {
-      if ( loginPressVal == true ) {
-        if( loginpress_find('.copyRight').length == 0 ){
-          loginpress_find('.footer-cont').append('<div class="copyRight">'+$('[id="_customize-input-loginpress_customization[login_footer_copy_right]"]').val()+'</div>');
+	wp.customize( 'loginpress_customization[login_copy_right_display]', function( value ) {
+		value.bind( function( loginPressVal ) {
+			if ( loginPressVal == true ) {
+				if( loginpress_find('.copyRight').length == 0 ){
+					loginpress_find('.footer-cont').append('<div class="copyRight">'+$('[id="_customize-input-loginpress_customization[login_footer_copy_right]"]').val()+'</div>');
 				}
 				$('#customize-control-loginpress_customization-login_footer_copy_right').show();
 				$('#customize-control-loginpress_customization-copyright_background_color').show();
 				$('#customize-control-loginpress_customization-copyright_text_color').show();
 				loginpress_find('.copyRight').css( 'background-color', footerBgClr );
 				loginpress_find('.copyRight').css( 'color', footerTextClr );
-				
-
 				// $('#customize-control-loginpress_customization-show_some_love_text_color').show();			
-      } else {
-        loginpress_find('.copyRight').remove();
+			} else {
+				loginpress_find('.copyRight').remove();
 				$('#customize-control-loginpress_customization-login_footer_copy_right').hide();
 				$('#customize-control-loginpress_customization-copyright_background_color').hide();
 				$('#customize-control-loginpress_customization-copyright_text_color').hide();
 				// $('#customize-control-loginpress_customization-show_some_love_text_color').hide();
-      }
-    });
+			}
+		});
 	});
 	
   /**

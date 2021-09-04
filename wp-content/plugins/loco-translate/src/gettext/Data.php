@@ -20,7 +20,7 @@ class Loco_gettext_Data extends LocoPoIterator implements JsonSerializable {
             return $ext;
         }
         // translators: Error thrown when attempting to parse a file that is not PO, POT or MO
-        throw new Loco_error_Exception( sprintf( __('%s is not a Gettext file'), $file->basename() ) );
+        throw new Loco_error_Exception( sprintf( __('%s is not a Gettext file','loco-translate'), $file->basename() ) );
     }
 
 
@@ -50,15 +50,16 @@ class Loco_gettext_Data extends LocoPoIterator implements JsonSerializable {
     /**
      * Like load but just pulls header, saving a full parse. PO only
      * @param Loco_fs_File
-     * @return Loco_gettext_Data
+     * @return LocoPoHeaders
      * @throws InvalidArgumentException
      */
     public static function head( Loco_fs_File $file ){
         if( 'mo' === self::ext($file) ){
             throw new InvalidArgumentException('PO only');
         }
-        $po = new LocoPoParser( $file->getContents() );
-        return new Loco_gettext_Data( $po->parse(1) );
+        $p = new LocoPoParser( $file->getContents() );
+        $p->parse(0);
+        return $p->getHeader();
     }
 
 
@@ -129,6 +130,10 @@ class Loco_gettext_Data extends LocoPoIterator implements JsonSerializable {
         if( $opts->use_fuzzy ){
             $mo->useFuzzy();
         }
+        /*/ TODO optionally exclude .js strings
+        if( $opts->purge_js ){
+            $mo->filter....
+        }*/
         return $mo->compile();
     }
 
@@ -334,8 +339,8 @@ class Loco_gettext_Data extends LocoPoIterator implements JsonSerializable {
     public function rebaseHeader( Loco_fs_File $origin, Loco_fs_File $target, $vendor ){
         $base = $target->getParent();
         $head = $this->getHeaders();
-        $key = 'X-'.$vendor.'-Basepath';
-        if( $key = $head->normalize($key) ){
+        $key = $head->normalize('X-'.$vendor.'-Basepath');
+        if( $key ){
             $oldRelBase = $head[$key];    
             $oldAbsBase = new Loco_fs_Directory($oldRelBase);
             $oldAbsBase->normalize( $origin->getParent() );
@@ -345,6 +350,20 @@ class Loco_gettext_Data extends LocoPoIterator implements JsonSerializable {
             return true;
         }
         return false;
+    }
+
+
+    /**
+     * Inherit meta values from header given, but leave standard headers intact.
+     * @param LocoPoHeaders source header
+     */
+    public function inheritHeader( LocoPoHeaders $source ){
+        $target = $this->getHeaders();
+        foreach( $source as $key => $value ){
+            if( 'X-' === substr($key,0,2) ) {
+                $target[$key] = $value;
+            }
+        }
     }
 
 

@@ -967,3 +967,62 @@ if ( ! function_exists( 'wcj_add_wpml_terms_filters' ) ) {
 		add_filter( 'get_terms_args', array( $sitepress, 'get_terms_args_filter' ), 10, 2 );
 	}
 }
+
+if ( ! function_exists( 'wcj_is_frontend_request' ) ) {
+	/**
+	 * Determines if the current request is for the frontend.
+	 *
+	 * The logic in this function is based off WooCommerce::is_request( 'frontend' )
+	 *
+	 * @version 5.4.2
+	 *
+	 */
+	function wcj_is_frontend_request() {
+		return ( ! is_admin() || defined( 'DOING_AJAX' ) ) && ! defined( 'DOING_CRON' ) && ! wcj_is_rest_api_request();
+	}
+}
+
+if ( ! function_exists( 'wcj_is_rest_api_request' ) ) {
+	/**
+	 * Returns true if the request is a non-legacy REST API request.
+	 *
+	 * This function is a compatibility wrapper for WC()->is_rest_api_request() which was introduced in WC 3.6.
+	 *
+	 * @version 5.4.2
+	 *
+	 */
+	function wcj_is_rest_api_request() {
+
+		if ( is_callable( array( WC(), 'is_rest_api_request' ) ) ) {
+			return WC()->is_rest_api_request();
+		}
+
+		if ( empty( $_SERVER['REQUEST_URI'] ) ) {
+			return false;
+		}
+
+		$rest_prefix         = trailingslashit( rest_get_url_prefix() );
+		$is_rest_api_request = ( false !== strpos( $_SERVER['REQUEST_URI'], $rest_prefix ) ); 
+
+		return apply_filters( 'woocommerce_is_rest_api_request', $is_rest_api_request );
+	}
+}
+
+if ( ! function_exists( 'wcj_get_variation_parent_id' ) ) {
+
+	function wcj_get_variation_parent_id( $product ) {
+		$product = $product instanceof WC_Product ? $product : wc_get_product( $product );
+
+		if ( ! $product->is_type( 'variation' ) ) {
+			$parent = false;
+		} else if ( is_callable( array( $product, 'get_parent_id' ) ) ) {
+			$parent = $product->get_parent_id();
+		} else if ( ! empty( $product->parent ) && $product->parent instanceof WC_Product_Variable ) {
+			$parent = $product->parent->get_id();
+		} else {
+			$parent = wp_get_post_parent_id( $product->get_id() );
+		}
+
+		return $parent;
+	}
+}

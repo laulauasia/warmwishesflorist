@@ -159,7 +159,7 @@ class LoginPress_Settings {
         'step'              => '1',
         'type'              => 'number',
         'default'           => 'Title',
-        'sanitize_callback' => 'abs'
+        'sanitize_callback' => 'absint'
       ),
       // array(
       //   'name'  => 'enable_privacy_policy',

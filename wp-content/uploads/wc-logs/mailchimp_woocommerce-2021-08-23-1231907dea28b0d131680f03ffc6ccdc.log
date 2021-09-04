@@ -1,0 +1,55 @@
+2021-08-23T00:01:45+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 15559
+2021-08-23T00:03:17+00:00 NOTICE member.sync :: kondaurovizmir@gmail.com has signed up to a lot of lists very recently; we're not allowing more signups for now
+2021-08-23T00:37:49+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 15560
+2021-08-23T00:38:52+00:00 NOTICE member.sync :: petririskin4@gmail.com has signed up to a lot of lists very recently; we're not allowing more signups for now
+2021-08-23T00:55:12+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 15561
+2021-08-23T00:56:09+00:00 NOTICE member.sync :: petrovicirina307@gmail.com has signed up to a lot of lists very recently; we're not allowing more signups for now
+2021-08-23T02:43:42+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 15562
+2021-08-23T02:44:39+00:00 NOTICE member.sync :: Subscribed Member melindarg4@hiraku4410.hideo82.sorataki.in.net :: Array
+(
+    [status_if_new] => 1
+    [merge_fields] => Array
+        (
+        )
+
+)
+
+2021-08-23T05:07:43+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 15563
+2021-08-23T05:08:37+00:00 NOTICE member.sync :: gamblinglotto@gmail.com has signed up to a lot of lists very recently; we're not allowing more signups for now
+2021-08-23T05:37:00+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 15564
+2021-08-23T05:38:01+00:00 NOTICE member.sync :: kippic9mt7@mail.ru has signed up to a lot of lists very recently; we're not allowing more signups for now
+2021-08-23T07:08:10+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 15565
+2021-08-23T07:08:49+00:00 NOTICE member.sync :: avgust87kruglov@gmail.com has signed up to a lot of lists very recently; we're not allowing more signups for now
+2021-08-23T07:14:30+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 9723
+2021-08-23T07:14:34+00:00 NOTICE member.sync :: Updated Member jingheng506@gmail.com ( merge fields only ) :: Array
+(
+    [merge_fields] => Array
+        (
+            [FNAME] => Jing Heng
+            [LNAME] => Ng
+        )
+
+)
+
+2021-08-23T09:05:30+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 15566
+2021-08-23T09:05:36+00:00 NOTICE member.sync :: Subscribed Member hatimestods@gmail.com :: Array
+(
+    [status_if_new] => 1
+    [merge_fields] => Array
+        (
+        )
+
+)
+
+2021-08-23T13:26:48+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 15567
+2021-08-23T13:27:50+00:00 NOTICE member.sync :: horitonovamasa65@gmail.com has signed up to a lot of lists very recently; we're not allowing more signups for now
+2021-08-23T13:54:22+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 15568
+2021-08-23T13:55:06+00:00 NOTICE member.sync :: nf0251543@gmail.com has signed up to a lot of lists very recently; we're not allowing more signups for now
+2021-08-23T14:13:06+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 15569
+2021-08-23T14:15:41+00:00 NOTICE member.sync :: grigorijdidlov@gmail.com has signed up to a lot of lists very recently; we're not allowing more signups for now
+2021-08-23T23:51:51+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 15570
+2021-08-23T23:52:05+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 15571
+2021-08-23T23:52:07+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 15572
+2021-08-23T23:53:48+00:00 NOTICE member.sync :: aleksei_vasnev_1972@rambler.ru has signed up to a lot of lists very recently; we're not allowing more signups for now
+2021-08-23T23:53:49+00:00 NOTICE member.sync :: ivan_mekhantyev_1970@rambler.ru has signed up to a lot of lists very recently; we're not allowing more signups for now
+2021-08-23T23:53:50+00:00 NOTICE member.sync :: igor_yumashev_1977@rambler.ru has signed up to a lot of lists very recently; we're not allowing more signups for now

@@ -148,8 +148,10 @@ if ( ! class_exists( 'WC_OD_Admin_Settings' ) ) {
 			// phpcs:disable WordPress.Security.NonceVerification
 			if ( 'delivery_range' === $current_section ) {
 				$range_id = ( isset( $_GET['range_id'] ) ? wc_clean( wp_unslash( $_GET['range_id'] ) ) : 'new' );
+				$range_id = ( 'new' === $range_id ? null : (int) $range_id );
 
-				$this->settings_api = new WC_OD_Settings_Delivery_Range( $range_id );
+				$delivery_range     = WC_OD_Delivery_Ranges::get_range( $range_id );
+				$this->settings_api = new WC_OD_Settings_Delivery_Range( $delivery_range );
 				return;
 			}
 
@@ -191,13 +193,13 @@ if ( ! class_exists( 'WC_OD_Admin_Settings' ) ) {
 			$suffix = wc_od_get_scripts_suffix();
 
 			if ( $this->is_calendar_section() ) {
-				wp_enqueue_style( 'fullcalendar', WC_OD_URL . 'assets/css/lib/fullcalendar.css', array(), '2.3.0' );
+				wp_enqueue_style( 'fullcalendar', WC_OD_URL . 'assets/css/lib/fullcalendar.css', array(), '2.9.3' );
 				wp_enqueue_style( 'tooltipster', WC_OD_URL . 'assets/css/lib/tooltipster.css', array(), '3.3.0' );
 
 				wp_enqueue_script( 'jquery-ui-dialog' );
 				wp_enqueue_script( 'tooltipster', WC_OD_URL . 'assets/js/lib/jquery.tooltipster.min.js', array( 'jquery' ), '3.3.0', true );
-				wp_enqueue_script( 'moment', WC_OD_URL . 'assets/js/lib/moment.min.js', array(), '2.9.0', true );
-				wp_enqueue_script( 'fullcalendar', WC_OD_URL . 'assets/js/lib/fullcalendar.min.js', array( 'jquery', 'moment' ), '2.3.0', true );
+				wp_enqueue_script( 'moment', WC_OD_URL . 'assets/js/lib/moment.min.js', array(), '2.13.0', true );
+				wp_enqueue_script( 'fullcalendar', WC_OD_URL . 'assets/js/lib/fullcalendar.min.js', array( 'jquery', 'moment' ), '2.9.3', true );
 
 				wc_od_enqueue_datepicker( 'settings' );
 				wp_enqueue_script( 'wc-od-calendar', WC_OD_URL . "assets/js/wc-od-calendar{$suffix}.js", array( 'jquery', 'wc-od-datepicker' ), WC_OD_VERSION, true );
@@ -205,8 +207,8 @@ if ( ! class_exists( 'WC_OD_Admin_Settings' ) ) {
 				wp_enqueue_script( 'wc-od-table-fields', WC_OD_URL . "assets/js/admin/table-fields{$suffix}.js", array( 'jquery' ), WC_OD_VERSION, true );
 			}
 
-			wp_enqueue_style( 'jquery-timepicker', WC_OD_URL . 'assets/css/lib/jquery.timepicker.css', array(), '1.11.15' );
-			wp_enqueue_script( 'jquery-timepicker', WC_OD_URL . 'assets/js/lib/jquery.timepicker.min.js', array( 'jquery' ), '1.11.15', true );
+			wp_enqueue_style( 'jquery-timepicker', WC_OD_URL . 'assets/css/lib/jquery.timepicker.css', array(), '1.13.18' );
+			wp_enqueue_script( 'jquery-timepicker', WC_OD_URL . 'assets/js/lib/jquery.timepicker.min.js', array( 'jquery' ), '1.13.18', true );
 
 			wp_enqueue_style( 'wc-od-settings', WC_OD_URL . 'assets/css/wc-od-settings.css', array(), WC_OD_VERSION );
 			wp_enqueue_script( 'wc-od-settings', WC_OD_URL . "assets/js/wc-od-settings{$suffix}.js", array( 'jquery' ), WC_OD_VERSION, true );
@@ -401,9 +403,28 @@ if ( ! class_exists( 'WC_OD_Admin_Settings' ) ) {
 					),
 
 					array(
+						'id'       => wc_od_maybe_prefix( 'checkout_location' ),
+						'title'    => __( 'Checkout location', 'woocommerce-order-delivery' ),
+						'desc'     => __( 'Choose the location in the checkout form where to display the delivery details.', 'woocommerce-order-delivery' ),
+						'type'     => 'select',
+						'desc_tip' => true,
+						'default'  => WC_OD()->settings()->get_default( 'checkout_location' ),
+						'options'  => array(
+							'before_customer_details' => __( 'Before customer details', 'woocommerce-order-delivery' ),
+							'before_billing'          => __( 'Before billing details', 'woocommerce-order-delivery' ),
+							'after_billing'           => __( 'After billing details', 'woocommerce-order-delivery' ),
+							'before_order_notes'      => __( 'Before order notes', 'woocommerce-order-delivery' ),
+							'after_order_notes'       => __( 'After order notes', 'woocommerce-order-delivery' ),
+							'after_additional_fields' => __( 'After additional fields', 'woocommerce-order-delivery' ),
+							'after_order_review'      => __( 'Between order review and payments', 'woocommerce-order-delivery' ),
+							'after_customer_details'  => __( 'After customer details', 'woocommerce-order-delivery' ),
+						),
+					),
+
+					array(
 						'id'       => wc_od_maybe_prefix( 'checkout_delivery_option' ),
 						'title'    => __( 'Checkout options', 'woocommerce-order-delivery' ),
-						'desc'     => __( 'Choose the delivery date option to be displayed on the checkout page.', 'woocommerce-order-delivery' ),
+						'desc'     => __( 'Choose what kind of content to display in the checkout form.', 'woocommerce-order-delivery' ),
 						'type'     => 'radio',
 						'desc_tip' => true,
 						'default'  => WC_OD()->settings()->get_default( 'checkout_delivery_option' ),

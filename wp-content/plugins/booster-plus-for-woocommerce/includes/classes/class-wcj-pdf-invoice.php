@@ -2,7 +2,7 @@
 /**
  * Booster for WooCommerce PDF Invoice
  *
- * @version 5.3.1
+ * @version 5.4.5
  * @author  Pluggabl LLC.
  */
 
@@ -24,7 +24,7 @@ class WCJ_PDF_Invoice extends WCJ_Invoice {
 	/**
 	 * prepare_pdf.
 	 *
-	 * @version 5.3.1
+	 * @version 5.4.5
 	 * @todo    [dev] check `addTTFfont()`
 	 * @todo    [dev] maybe `$pdf->SetAuthor( 'Booster for WooCommerce' )`
 	 * @todo    [dev] maybe `$pdf->setLanguageArray( $l )`
@@ -145,7 +145,9 @@ class WCJ_PDF_Invoice extends WCJ_Invoice {
 		// Background image
 		if ( '' != ( $background_image = do_shortcode( wcj_get_option( 'wcj_invoicing_' . $invoice_type . '_background_image', '' ) ) ) ) {
 			$background_image = 'yes' === ( $parse_bkg_image = wcj_get_option( 'wcj_invoicing_' . $invoice_type . '_background_image_parse', 'yes' ) ) ? $_SERVER['DOCUMENT_ROOT'] . parse_url( $background_image, PHP_URL_PATH ) : $background_image;
-			$pdf->Image( $background_image, 0, 0, $pdf->getPageWidth(), $pdf->getPageHeight() );
+			$pdf->SetAutoPageBreak(false, 0);
+			$pdf->Image( $background_image,0, 0, $pdf->getPageWidth(), $pdf->getPageHeight(), '', '', '', false, 300, '', false, false, 0);
+			$pdf->setPageMark();
 		}
 
 		return $pdf;
@@ -209,7 +211,7 @@ class WCJ_PDF_Invoice extends WCJ_Invoice {
 	/**
 	 * get_pdf.
 	 *
-	 * @version 5.1.0
+	 * @version 5.4.1
 	 * @todo    [dev] (maybe) `die()` on success
 	 */
 	function get_pdf( $dest ) {
@@ -218,6 +220,31 @@ class WCJ_PDF_Invoice extends WCJ_Invoice {
 		$styling = '<style>' . wcj_get_option( 'wcj_invoicing_' . $this->invoice_type . '_css',
 			WCJ()->modules['pdf_invoicing_styling']->get_default_css_template( $this->invoice_type ) ) . '</style>';
 		$pdf->writeHTMLCell( 0, 0, '', '', $styling . $html, 0, 1, 0, true, '', true );
+		// Invoice Paid Stamp
+		if($this->invoice_type == "invoice" && wcj_get_option( 'wcj_invoicing_invoice_paid_stamp_enabled', 'yes' ) == "yes" ){
+			$paid_stamp_image = "";
+			if(wcj_get_option( 'wcj_invoicing_invoice_custom_paid_stamp', 'yes' ) != "" ){
+                $paid_stamp_image = wcj_get_option( 'wcj_invoicing_invoice_custom_paid_stamp', 'yes' );
+			}
+			else {
+				$paid_stamp_image = wcj_plugin_url()."/assets/images/paid_stamp_1.png";
+			}
+            
+            $included_gateways = wcj_get_option( 'wcj_invoicing_invoice_paid_stamp_payment_gateways', array() );
+            $the_order         = wc_get_order( $this->order_id );
+            $payment_method    = wcj_order_get_payment_method( $the_order );
+            
+            if ( empty ( $included_gateways ) ) {
+            	$included_gateway = true;
+            }
+            else{
+                $included_gateway = in_array( $payment_method, $included_gateways );
+            }
+            if ( true === $included_gateway ) {
+	            $pdf->Image( $paid_stamp_image, 90, 180, 40, 40 );
+            }
+        }
+
 		$result_pdf = $pdf->Output( '', 'S' );
 		$file_name  = $this->get_file_name();
 		if ( 'F' === $dest ) {

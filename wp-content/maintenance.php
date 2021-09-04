@@ -5,7 +5,7 @@
 //  DO NOT MODIFY THIS FILE BECAUSE IT WAS GENERATED AUTOMATICALLY,
 //  SO ALL YOUR CHANGES WILL BE LOST THE NEXT TIME THE FILE IS GENERATED.
 //  IF YOU REQUIRE TO APPLY CUSTOM MODIFICATIONS, PERFORM THEM IN THE FOLLOWING FILE:
-//  /var/www/vhosts/warmwishesflorist.com/httpdocs/wp-content/maintenance/template.phtml
+//  /var/www/vhosts/warmwishesflorist.com/staging.warmwishesflorist.com/v4/wp-content/maintenance/template.phtml
 
 
 $protocol = $_SERVER['SERVER_PROTOCOL'];
@@ -23,9 +23,9 @@ header('Retry-After: 600');
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <link rel="icon" href="https://warmwishesflorist.com/wp-content/uploads/2018/12/cropped-icon-32x32.png">
-    <link rel="stylesheet" href="https://warmwishesflorist.com/wp-content/maintenance/assets/styles.css">
-    <script src="https://warmwishesflorist.com/wp-content/maintenance/assets/timer.js"></script>
+    <link rel="icon" href="https://staging.warmwishesflorist.com/v4/wp-content/uploads/2018/12/cropped-icon-32x32.png">
+    <link rel="stylesheet" href="https://staging.warmwishesflorist.com/v4/wp-content/maintenance/assets/styles.css">
+    <script src="https://staging.warmwishesflorist.com/v4/wp-content/maintenance/assets/timer.js"></script>
     <title>Scheduled Maintenance</title>
 </head>
 
@@ -44,7 +44,7 @@ header('Retry-After: 600');
     <!--START_SOCIAL_LINKS_BLOCK-->
     <section class="social-links">
                     <a class="social-links__link" href="https://www.facebook.com/cloudpromy" target="_blank" title="Facebook">
-                <span class="icon"><img src="https://warmwishesflorist.com/wp-content/maintenance/assets/images/facebook.svg" alt="Facebook"></span>
+                <span class="icon"><img src="https://staging.warmwishesflorist.com/v4/wp-content/maintenance/assets/images/facebook.svg" alt="Facebook"></span>
             </a>
             </section>
     <!--END_SOCIAL_LINKS_BLOCK-->
@@ -53,7 +53,7 @@ header('Retry-After: 600');
 
 <footer class="footer">
     <div class="footer__content">
-        Powered by WordPress Toolkit <a href="https://www.plesk.com/" target="_blank"><img class="logo" src="https://warmwishesflorist.com/wp-content/maintenance/assets/images/plesk-logo.png" alt="Plesk"></a>
+        Powered by WordPress Toolkit <a href="https://www.plesk.com/" target="_blank"><img class="logo" src="https://staging.warmwishesflorist.com/v4/wp-content/maintenance/assets/images/plesk-logo.png" alt="Plesk"></a>
     </div>
 </footer>
 

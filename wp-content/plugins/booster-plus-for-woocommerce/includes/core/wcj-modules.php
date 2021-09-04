@@ -2,8 +2,8 @@
 /**
  * Booster for WooCommerce - Modules
  *
- * @version 5.3.1
- * @since   3.2.4
+ * @version 5.4.2
+ * @since   3.2.5
  * @author  Pluggabl LLC.
  */
 
@@ -133,8 +133,13 @@ $wcj_module_files = array(
 	'pdf-invoices/submodules/class-wcj-pdf-invoicing-page.php',
 	'pdf-invoices/submodules/class-wcj-pdf-invoicing-emails.php',
 	'pdf-invoices/submodules/class-wcj-pdf-invoicing-display.php',
+	'pdf-invoices/submodules/class-wcj-pdf-invoicing-paid-stamp.php',
 	'pdf-invoices/submodules/class-wcj-pdf-invoicing-advanced.php',
+	'pdf-invoices/submodules/class-wcj-pdf-invoicing-extra-columns.php',
 	'class-wcj-pdf-invoicing.php',
+	'class-wcj-product-extra-fees.php',
+	'class-wcj-frequently-bought-together.php',
+	'class-wcj-one-page-checkout.php'
 );
 
 $this->modules = array();

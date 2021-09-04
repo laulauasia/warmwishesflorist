@@ -1,0 +1,18 @@
+2021-09-04T06:34:29+00:00 CRITICAL Access level to Porto_Elementor_Section::get_html_tag() must be protected (as in class Elementor\Element_Section) or weaker in /var/www/vhosts/warmwishesflorist.com/staging.warmwishesflorist.com/v4/wp-content/plugins/porto-functionality/elementor/elements/porto_section.php on line 468
+
+2021-09-04T06:37:30+00:00 CRITICAL Access level to Porto_Elementor_Section::get_html_tag() must be protected (as in class Elementor\Element_Section) or weaker in /var/www/vhosts/warmwishesflorist.com/staging.warmwishesflorist.com/v4/wp-content/plugins/porto-functionality/elementor/elements/porto_section.php on line 468
+
+2021-09-04T06:40:34+00:00 CRITICAL Access level to Porto_Elementor_Section::get_html_tag() must be protected (as in class Elementor\Element_Section) or weaker in /var/www/vhosts/warmwishesflorist.com/staging.warmwishesflorist.com/v4/wp-content/plugins/porto-functionality/elementor/elements/porto_section.php on line 468
+
+2021-09-04T06:41:35+00:00 CRITICAL Access level to Porto_Elementor_Section::get_html_tag() must be protected (as in class Elementor\Element_Section) or weaker in /var/www/vhosts/warmwishesflorist.com/staging.warmwishesflorist.com/v4/wp-content/plugins/porto-functionality/elementor/elements/porto_section.php on line 468
+
+2021-09-04T06:41:37+00:00 CRITICAL Access level to Porto_Elementor_Section::get_html_tag() must be protected (as in class Elementor\Element_Section) or weaker in /var/www/vhosts/warmwishesflorist.com/staging.warmwishesflorist.com/v4/wp-content/plugins/porto-functionality/elementor/elements/porto_section.php on line 468
+
+2021-09-04T07:10:12+00:00 CRITICAL Uncaught Error: Call to a member function update_meta() on bool in /var/www/vhosts/warmwishesflorist.com/staging.warmwishesflorist.com/v4/wp-content/plugins/elementor-pro/modules/theme-builder/classes/conditions-manager.php:285
+Stack trace:
+#0 /var/www/vhosts/warmwishesflorist.com/staging.warmwishesflorist.com/v4/wp-content/plugins/elementor-pro/modules/theme-builder/classes/conditions-manager.php(166): ElementorPro\Modules\ThemeBuilder\Classes\Conditions_Manager->save_conditions()
+#1 [internal function]: ElementorPro\Modules\ThemeBuilder\Classes\Conditions_Manager->ajax_save_theme_template_conditions()
+#2 /var/www/vhosts/warmwishesflorist.com/staging.warmwishesflorist.com/v4/wp-content/plugins/elementor/core/common/modules/ajax/module.php(171): call_user_func()
+#3 /var/www/vhosts/warmwishesflorist.com/staging.warmwishesflorist.com/v4/wp-includes/class-wp-hook.php(303): Elementor\Core\Common\Modules\Ajax\Module->handle_ajax_request()
+#4 /var/www/vhosts/warmwishesflorist.com/staging.warmwishesflorist.com/v4/wp in /var/www/vhosts/warmwishesflorist.com/staging.warmwishesflorist.com/v4/wp-content/plugins/elementor-pro/modules/theme-builder/classes/conditions-manager.php on line 285
+

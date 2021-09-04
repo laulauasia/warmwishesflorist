@@ -37,7 +37,7 @@ class Categories extends Base_Widget {
 		];
 	}
 
-	protected function _register_controls() {
+	protected function register_controls() {
 		$this->start_controls_section(
 			'section_layout',
 			[
@@ -46,17 +46,7 @@ class Categories extends Base_Widget {
 			]
 		);
 
-		$this->add_responsive_control(
-			'columns',
-			[
-				'label' => __( 'Columns', 'elementor-pro' ),
-				'type' => Controls_Manager::NUMBER,
-				'prefix_class' => 'elementor-products-columns%s-',
-				'default' => 4,
-				'min' => 1,
-				'max' => 12,
-			]
-		);
+		$this->add_columns_responsive_control();
 
 		$this->add_control(
 			'number',
@@ -397,7 +387,13 @@ class Categories extends Base_Widget {
 	}
 
 	public function render() {
-		echo do_shortcode( $this->get_shortcode() );
+		$product_categories_html = do_shortcode( $this->get_shortcode() );
+
+		if ( $product_categories_html ) {
+			$product_categories_html = str_replace( '<ul class="products', '<ul class="products elementor-grid', $product_categories_html );
+
+			echo $product_categories_html;
+		}
 	}
 
 	public function render_plain_content() {

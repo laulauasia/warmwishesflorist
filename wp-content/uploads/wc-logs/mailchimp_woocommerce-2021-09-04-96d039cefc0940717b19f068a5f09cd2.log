@@ -1,0 +1,4 @@
+2021-09-04T07:59:10+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Cart_Update queued :: obj_id d43365cbe5bca839a8ca69a4cd0b0381
+2021-09-04T07:59:33+00:00 ERROR abandoned_cart.error :: email: laulau.overwatch@gmail.com :: attempting product update :: Resource Not Found :: The requested resource could not be found.
+2021-09-04T07:59:34+00:00 NOTICE product_submit.error :: addStoreProduct :: #24152 :: Error Code 404 :: Resource Not Found :: The requested resource could not be found. on 1858 in /var/www/vhosts/warmwishesflorist.com/httpdocs/v3/wp-content/plugins/mailchimp-for-woocommerce/includes/api/class-mailchimp-api.php
+2021-09-04T07:59:34+00:00 ERROR abandoned_cart.error :: Error Code 404 :: Resource Not Found :: The requested resource could not be found. on 1858 in /var/www/vhosts/warmwishesflorist.com/httpdocs/v3/wp-content/plugins/mailchimp-for-woocommerce/includes/api/class-mailchimp-api.php

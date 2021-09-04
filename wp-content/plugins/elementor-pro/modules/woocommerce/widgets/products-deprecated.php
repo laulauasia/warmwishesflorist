@@ -57,11 +57,11 @@ class Products_Deprecated extends Products_Base {
 		return $this->query;
 	}
 
-	protected function _register_skins() {
+	protected function register_skins() {
 		$this->add_skin( new Skins\Skin_Classic( $this ) );
 	}
 
-	protected function _register_controls() {
+	protected function register_controls() {
 		$this->deprecated_notice( Plugin::get_title(), '2.0.10', '', __( 'Products', 'elementor-pro' ) );
 
 		$this->start_controls_section(
@@ -152,11 +152,50 @@ class Products_Deprecated extends Products_Base {
 			]
 		);
 
-		Module::add_exclude_controls( $this );
+		$this->add_control(
+			'exclude',
+			[
+				'label' => __( 'Exclude', 'elementor-pro' ),
+				'type' => Controls_Manager::SELECT2,
+				'multiple' => true,
+				'options' => [
+					'current_post' => __( 'Current Post', 'elementor-pro' ),
+					'manual_selection' => __( 'Manual Selection', 'elementor-pro' ),
+				],
+				'label_block' => true,
+			]
+		);
+
+		$this->add_control(
+			'exclude_ids',
+			[
+				'label' => __( 'Search & Select', 'elementor-pro' ),
+				'type' => Module::QUERY_CONTROL_ID,
+				'autocomplete' => [
+					'object' => Module::QUERY_OBJECT_POST,
+				],
+				'options' => [],
+				'label_block' => true,
+				'multiple' => true,
+				'condition' => [
+					'exclude' => 'manual_selection',
+				],
+			]
+		);
+
+		$this->add_control(
+			'avoid_duplicates',
+			[
+				'label' => __( 'Avoid Duplicates', 'elementor-pro' ),
+				'type' => Controls_Manager::SWITCHER,
+				'default' => '',
+				'description' => __( 'Set to Yes to avoid duplicate posts from showing up on the page. This only affects the frontend.', 'elementor-pro' ),
+			]
+		);
 
 		$this->end_controls_section();
 
-		parent::_register_controls();
+		parent::register_controls();
 	}
 
 	public function query_posts() {

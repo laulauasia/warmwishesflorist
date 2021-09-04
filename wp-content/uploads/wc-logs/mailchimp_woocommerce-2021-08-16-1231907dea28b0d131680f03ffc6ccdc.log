@@ -1,0 +1,24 @@
+2021-08-16T00:23:05+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 15490
+2021-08-16T00:27:12+00:00 NOTICE member.sync :: dbu10082021s@gmailbd.ga has signed up to a lot of lists very recently; we're not allowing more signups for now
+2021-08-16T09:14:23+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 15491
+2021-08-16T09:14:37+00:00 NOTICE member.sync :: Subscribed Member jeanninexr6@rokuro75.kiyoakari.xyz :: Array
+(
+    [status_if_new] => 1
+    [merge_fields] => Array
+        (
+        )
+
+)
+
+2021-08-16T09:19:22+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 15492
+2021-08-16T09:19:33+00:00 NOTICE member.sync :: asidoreova@gmail.com has signed up to a lot of lists very recently; we're not allowing more signups for now
+2021-08-16T09:51:45+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 15493
+2021-08-16T09:55:19+00:00 NOTICE member.sync :: gitovsamil@gmail.com has signed up to a lot of lists very recently; we're not allowing more signups for now
+2021-08-16T10:09:56+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 15494
+2021-08-16T10:11:53+00:00 NOTICE member.sync :: denisfedosov910@gmail.com has signed up to a lot of lists very recently; we're not allowing more signups for now
+2021-08-16T17:26:54+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 15495
+2021-08-16T17:28:20+00:00 NOTICE member.sync :: irrmaureen422@gmail.com has signed up to a lot of lists very recently; we're not allowing more signups for now
+2021-08-16T17:55:52+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 15496
+2021-08-16T17:56:41+00:00 NOTICE member.sync :: himrusoptnn@gmail.com has signed up to a lot of lists very recently; we're not allowing more signups for now
+2021-08-16T21:57:15+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 15497
+2021-08-16T21:58:12+00:00 NOTICE member.sync :: lipu.tov.che.nko.jul.i.y.aa@gmail.com has signed up to a lot of lists very recently; we're not allowing more signups for now

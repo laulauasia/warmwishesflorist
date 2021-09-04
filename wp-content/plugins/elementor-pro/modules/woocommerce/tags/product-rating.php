@@ -2,6 +2,7 @@
 namespace ElementorPro\Modules\Woocommerce\Tags;
 
 use Elementor\Controls_Manager;
+use ElementorPro\Modules\Woocommerce\Tags\Traits\Tag_Product_Id;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
@@ -16,7 +17,7 @@ class Product_Rating extends Base_Tag {
 		return __( 'Product Rating', 'elementor-pro' );
 	}
 
-	protected function _register_controls() {
+	protected function register_controls() {
 		$this->add_control( 'field', [
 			'label' => __( 'Format', 'elementor-pro' ),
 			'type' => Controls_Manager::SELECT,
@@ -27,10 +28,12 @@ class Product_Rating extends Base_Tag {
 			],
 			'default' => 'average_rating',
 		] );
+
+		$this->add_product_id_control();
 	}
 
 	public function render() {
-		$product = wc_get_product();
+		$product = wc_get_product( $this->get_settings( 'product_id' ) );
 		if ( ! $product ) {
 			return '';
 		}

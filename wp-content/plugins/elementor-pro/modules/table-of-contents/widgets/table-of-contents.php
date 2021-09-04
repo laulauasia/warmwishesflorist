@@ -9,6 +9,8 @@ use Elementor\Core\Kits\Documents\Tabs\Global_Colors;
 use Elementor\Core\Kits\Documents\Tabs\Global_Typography;
 use Elementor\Icons_Manager;
 use ElementorPro\Base\Base_Widget;
+use ElementorPro\Core\Utils;
+use ElementorPro\Plugin;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
@@ -36,7 +38,27 @@ class Table_Of_Contents extends Base_Widget {
 		return [ 'toc' ];
 	}
 
-	protected function _register_controls() {
+	/**
+	 * Get Frontend Settings
+	 *
+	 * In the TOC widget, this implementation is used to pass a pre-rendered version of the icon to the front end,
+	 * which is required in case the FontAwesome SVG experiment is active.
+	 *
+	 * @since 3.4.0
+	 *
+	 * @return array
+	 */
+	public function get_frontend_settings() {
+		$frontend_settings = parent::get_frontend_settings();
+
+		if ( Plugin::elementor()->experiments->is_feature_active( 'e_font_icon_svg' ) && ! empty( $frontend_settings['icon']['value'] ) ) {
+			$frontend_settings['icon']['rendered_tag'] = Icons_Manager::render_font_icon( $frontend_settings['icon'] );
+		}
+
+		return $frontend_settings;
+	}
+
+	protected function register_controls() {
 		$this->start_controls_section(
 			'table_of_contents',
 			[
@@ -350,6 +372,18 @@ class Table_Of_Contents extends Base_Widget {
 		);
 
 		$this->add_control(
+			'loader_color',
+			[
+				'label' => __( 'Loader Color', 'elementor-pro' ),
+				'type' => Controls_Manager::COLOR,
+				'selectors' => [
+					// Not using CSS var for BC, when not configured: the loader should get the color from the body tag.
+					'{{WRAPPER}} .elementor-toc__spinner' => 'color: {{VALUE}}; fill: {{VALUE}};',
+				],
+			]
+		);
+
+		$this->add_control(
 			'border_width',
 			[
 				'label' => __( 'Border Width', 'elementor-pro' ),
@@ -487,6 +521,24 @@ class Table_Of_Contents extends Base_Widget {
 			[
 				'label' => __( 'List', 'elementor-pro' ),
 				'tab' => Controls_Manager::TAB_STYLE,
+			]
+		);
+
+		$this->add_responsive_control(
+			'max_height',
+			[
+				'label' => __( 'Max Height', 'elementor-pro' ),
+				'type' => Controls_Manager::SLIDER,
+				'size_units' => [ 'px', 'vh' ],
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 1000,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}}' => '--toc-body-max-height: {{SIZE}}{{UNIT}}',
+				],
 			]
 		);
 
@@ -663,9 +715,11 @@ class Table_Of_Contents extends Base_Widget {
 		if ( $settings['collapse_subitems'] ) {
 			$this->add_render_attribute( 'body', 'class', 'elementor-toc__list-items--collapsible' );
 		}
+
+		$html_tag = Utils::validate_html_tag( $settings['html_tag'] );
 		?>
 		<div class="elementor-toc__header">
-			<?php echo '<' . $settings['html_tag'] . ' class="elementor-toc__header-title">' . $settings['title'] . '</' . $settings['html_tag'] . '>'; ?>
+			<?php echo '<' . $html_tag . ' class="elementor-toc__header-title">' . $settings['title'] . '</' . $html_tag . '>'; ?>
 			<?php if ( 'yes' === $settings['minimize_box'] ) : ?>
 				<div class="elementor-toc__toggle-button elementor-toc__toggle-button--expand"><?php Icons_Manager::render_icon( $settings['expand_icon'] ); ?></div>
 				<div class="elementor-toc__toggle-button elementor-toc__toggle-button--collapse"><?php Icons_Manager::render_icon( $settings['collapse_icon'] ); ?></div>
@@ -673,7 +727,20 @@ class Table_Of_Contents extends Base_Widget {
 		</div>
 		<div <?php echo $this->get_render_attribute_string( 'body' ); ?>>
 			<div class="elementor-toc__spinner-container">
-				<i class="elementor-toc__spinner eicon-loading eicon-animation-spin" aria-hidden="true"></i>
+				<?php
+					Icons_Manager::render_icon(
+						[
+							'library' => 'eicons',
+							'value' => 'eicon-loading',
+						],
+						[
+							'class' => [
+								'elementor-toc__spinner',
+								'eicon-animation-spin',
+							],
+							'aria-hidden' => 'true',
+						]
+					); ?>
 			</div>
 		</div>
 		<?php

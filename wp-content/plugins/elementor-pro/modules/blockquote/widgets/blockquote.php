@@ -41,7 +41,7 @@ class Blockquote extends Base_Widget {
 		return [ 'blockquote', 'quote', 'paragraph', 'testimonial', 'text', 'twitter', 'tweet' ];
 	}
 
-	protected function _register_controls() {
+	protected function register_controls() {
 		$this->start_controls_section(
 			'section_blockquote_content',
 			[
@@ -434,6 +434,7 @@ class Blockquote extends Base_Widget {
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-blockquote__tweet-button' => 'color: {{VALUE}}',
+					'{{WRAPPER}} .elementor-blockquote__tweet-button svg' => 'fill: {{VALUE}}',
 				],
 			]
 		);
@@ -476,6 +477,7 @@ class Blockquote extends Base_Widget {
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-blockquote__tweet-button:hover' => 'color: {{VALUE}}',
+					'{{WRAPPER}} .elementor-blockquote__tweet-button:hover svg' => 'fill: {{VALUE}}',
 				],
 			]
 		);

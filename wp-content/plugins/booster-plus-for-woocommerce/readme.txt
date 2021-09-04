@@ -2,8 +2,8 @@
 Contributors: anbinder, karzin, pluggabl
 Tags: woocommerce, booster for woocommerce, woocommerce jetpack
 Requires at least: 4.4
-Tested up to: 5.6
-Stable tag: 5.3.7
+Tested up to: 5.8
+Stable tag: 5.4.6
 License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -32,6 +32,7 @@ Booster for WooCommerce is a WordPress WooCommerce plugin that supercharges your
 * *Product Open Pricing (Name Your Price)* - Let your store customers enter price for the product manually.
 * *Product Price by Formula* - Set formula for automatic product price calculation.
 * *Wholesale Price* - Set wholesale pricing depending on product quantity in cart (buy more pay less).
+
 
 **Button & Price Labels**
 
@@ -90,6 +91,8 @@ Booster for WooCommerce is a WordPress WooCommerce plugin that supercharges your
 * *Empty Cart Button* - Add (and customize) "Empty Cart" button to the cart and checkout pages.
 * *Mini Cart Custom Info* - Add custom info to the mini cart widget.
 * *URL Coupons* - WooCommerce URL coupons.
+* *Frequently Bought Together* - Add Frequently Bought Together section with suggest items usually bought together with the product watched by your customer. (Plus only)
+* *One Page Checkout* - One Page Checkout make easier for customers to buy from custom checkout pages by displaying both product selection and checkout forms on a single page. (Plus only)
 
 **Payment Gateways**
 
@@ -130,7 +133,14 @@ Booster for WooCommerce is a WordPress WooCommerce plugin that supercharges your
 
 **PDF Invoicing & Packing Slips**
 
-* *PDF Invoicing* - Invoices, Proforma Invoices, Credit Notes and Packing Slips.
+* *PDF Invoicing* - Invoices, Proforma Invoices, Credit Notes, Paid Stamp and Packing Slips.
+* *Paid Stamp*
+* *Display product image on pdf*
+* *Display product addons on pdf*
+* *Display product input fields on pdf*
+* *Display checkout custom fields on pdf
+* *Display WooCommerce order’s meta on pdf*
+* *Display WooCommerce subscription order details on pdf*
 
 **Emails & Misc.**
 
@@ -192,6 +202,93 @@ You can see the differences between versions in this [table](https://booster.io/
 8. Booster for WooCommerce - Emails & Misc.
 
 == Changelog ==
+
+= 5.4.6 27/08/2021 =
+* Fix - SHIPPING & ORDERS - Order Numbers - Fixed order number sequential bug for a new order for different PHP versions.
+
+= 5.4.5 25/08/2021 =
+* Fix - PDF INVOICING & PACKING SLIPS - Fixed table border is not being shown when we use a background image.
+* Fix - PDF INVOICING & PACKING SLIPS - Fixed page break not working when extra header css is being added.
+* Fix - PDF INVOICING & PACKING SLIPS - Fixed refund extra fee and shipping value not being shown on item table.
+* Fix - CART & CHECKOUT - Checkout Custom Fields - Fixed Category rules of checkout were not being reflected on email.
+* Fix - CART & CHECKOUT - EU VAT Number - Fixed EU vat number required notice when the field is empty.
+* Fix - SHIPPING & ORDERS - Order Numbers - Fixed order number sequential bug for a new order.
+* Fix - PRICES & CURRENCIES - Prices and Currencies by Country - Fixed closure error when widgets are being used on shop page.
+* Fix - PRICES & CURRENCIES - Wholesale Price - Fixed per product price issue with the multicurrency switcher.
+* WooCommerce 5.6.0 tested
+* WordPress 5.8 tested
+
+= 5.4.4 11/08/2021 =
+* Fix - Emails & Misc.- Email Verification - Fixed security issue for Authentication link.
+
+= 5.4.3 28/07/2021 =
+* Fix - SHIPPING & ORDERS- Order Quantities - Fixed Steps issue on product detail page.
+* Fix - PRODUCTS - Product Addons - Fixed issue when "Enable AJAX on Single Product Page" option, Prices of Related products are also change while changing varition of variable product.
+* Fix - CART & CHECKOUT - Checkout Custom Fields - Fixed meta key issue for input type select.
+* Fix - PRICES & CURRENCIES - Multicurrency (Currency Switcher) - Fixed Compatibility issue with WooCommerce Attribute Swatches by Iconic Plugin
+* Fix - Fixed error WP_Scripts::localize was called incorrectly. The $l10n parameter must be an array
+* Feature - SHIPPING & ORDERS - Order Quantities - Show notice while add to cart, if the Maximum order quantity limit reached.
+* Feature - SHIPPING & ORDERS - Order Quantities - Allow any quantity if the product is lower than the minimum quantity.
+* Feature - PRODUCTS - Product Visibility by Country - Added options to choose All countries or WooCommerce Selling Locations for For [wcj_selector selector_type="country"]
+* WooCommerce 5.5.2 tested
+* Wordpress 5.8 tested
+
+= 5.4.2 24/06/2021 =
+* Fix - CART & CHECKOUT - Checkout Custom Fields - Fixed duplicate meta key issue.
+* Fix - SHIPPING & ORDERS - Order Numbers - Fixed hashid dependency issue.
+* Fix - PRODUCTS - SKU - Fixed hashid dependency issue.
+* Feature - CART & CHECKOUT - One Page Checkout - you can add product to one page checkout globally or product id wise or you can just checkout option in relative product single page.
+* Feature - CART & CHECKOUT - Frequently Bought Together - Add Frequently Bought Together section with suggest items usually bought together with the product watched by your customer.
+* Feature - CONTACT SUPPORT - Quick link to reach us for technical support or suggest an idea.
+* PHP 8.0.6 tested
+* WooCommerce 5.4.1 tested
+* Wordpress 5.7.2 tested
+
+= 5.4.1 27/05/2021 =
+* Feature - PDF INVOICING & PACKING SLIPS  - Added new feature to add paid stamp to PDF invoices for particular payment gateways.
+* Display product image using shortcode like “product_thumbnail”  in order item table 
+* Display product addons on PDF: You can add Product addon title using "item_product_addons"
+* Subscription Order: If you are using subscription type product you can easily display For example : [wcj_order_subscription_get_date subscription_date_type=”start”]
+* Display checkout custom fields on pdf Using [wcj_order_checkout_field] shortcode. You can display checkout custom fields on PDF Invoices.
+* Display product input fields on pdf: Find wcj_order_items_table shortcode on Template code. Using “|” separator add “item_product_input_fields_with_titles” on “columns” argument. Add column title with product input field column title on “columns_titles” argument.
+* Display WooCommerce order’s meta on pdf using Using [wcj_order_meta] shortcode you can display WooCommerce order’s meta on pdf. For example : [wcj_order_meta meta_key="_your_key"]
+* PHP 8.0.6 tested
+* WooCommerce 5.3.0 tested
+* Wordpress 5.7.2 tested
+
+
+= 5.4.0 29/04/2021 =
+* Feature - PRODUCTS - Product Extra Fees - Added new module to allow store owner to charge extra fees on particular product.
+* Dev - Add Tooltip & Suggestion for fields
+* Dev - Shortcodes - Orders - Add `[Wcj_order_shipping_price_without_html_custom]` shortcode.
+* Dev - Shortcodes - Orders - Add `[Wcj_order_total_without_html_custom]` shortcode.
+* Dev - Shortcodes - Orders - Add `[Wcj_order_total_fees_incl_tax_without_html_custom]` shortcode.
+* Dev - Shortcodes - Orders - Add `[Wcj_order_total_tax_without_html_custom]` shortcode.
+* Dev - Shortcodes - Product - Add `[wcj_product_regular_price_without_html_custom]` shortcode.
+* Dev - Shortcodes - Product - Add `[wcj_product_purchase_price_without_html_custom]` shortcode.
+* Fix - CART & CHECKOUT - Checkout Core Fields - Fix "Checkout Field arragement & Lable for required field" issue.
+* Fix - PRICES & CURRENCIES - Product Price by Formula - Quick edit issue fixed
+* Fix - PRICES & CURRENCIES - Prices and Currencies by Country - Quick edit issue fixed
+* PHP 8.0.3 tested
+* WooCommerce 5.2.2 tested
+* Wordpress 5.7.1 tested
+
+= 5.3.9 17/03/2021 =
+* PHP 8.0.2 tested
+* WooCommerce 5.1.0 tested
+* Wordpress 5.7 tested
+
+= 5.3.8 - 24/02/2021 =
+
+* PHP 8.0.2 tested
+* WooCommerce 5.0 tested
+* Dev - PRODUCTS - Stock - For a Variable product, the custom stock message should be shown before option selection, if stock management is set at the product level.
+* Dev - PRODUCTS - Stock - Show product availability message on shop/loop/search etc.
+* Fix - PRICES & CURRENCIES - Global Discount - Discount conflict when we enable global and wholesale both discounts.
+* Dev - SHIPPING & ORDERS - Order Minimum Amount - Compatibility issue has been resolved with Woocommerce Blocks plugin
+* Fix - SHIPPING & ORDERS - Order Numbers - Custom order number search is not working when the date parameter is set
+* Dev - PDF INVOICING & PACKING SLIPS - Add addition, subtraction, division attributes to shortcodes like multiply_by
+* Dev - PRODUCTS - Shortcodes - Exclude Item_total from order total and order subtotal if the product has been excluded by tag, category or attribute name in invoice pdf.
 
 = 5.3.7 - 28/01/2021 =
 * Fix - CART & CHECKOUT - Checkout Core Fields - Fix "Checkout Field arragement not working" issue.

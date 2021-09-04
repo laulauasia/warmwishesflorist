@@ -1,0 +1,98 @@
+2021-08-22T02:45:13+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Cart_Update queued :: obj_id 9a974085acda58568bfc553b23b27728
+2021-08-22T02:45:15+00:00 ERROR abandoned_cart.error :: email: eleenanadhirah@gmail.com :: attempting product update :: Resource Not Found :: The requested resource could not be found.
+2021-08-22T02:45:16+00:00 NOTICE product_submit.error :: addStoreProduct :: #22274 :: Error Code 404 :: Resource Not Found :: The requested resource could not be found. on 1858 in /var/www/vhosts/warmwishesflorist.com/httpdocs/wp-content/plugins/mailchimp-for-woocommerce/includes/api/class-mailchimp-api.php
+2021-08-22T02:45:16+00:00 ERROR abandoned_cart.error :: Error Code 404 :: Resource Not Found :: The requested resource could not be found. on 1858 in /var/www/vhosts/warmwishesflorist.com/httpdocs/wp-content/plugins/mailchimp-for-woocommerce/includes/api/class-mailchimp-api.php
+2021-08-22T03:48:05+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Order starts in 90 seconds :: obj_id 24121
+2021-08-22T03:48:06+00:00 NOTICE debug :: Order ID 24121 was processing and is now completed :: Array
+(
+    [new_order] => 
+    [tracking] => 
+)
+
+2021-08-22T03:48:38+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Order starts in 90 seconds :: obj_id 24122
+2021-08-22T03:48:38+00:00 NOTICE debug :: Order ID 24122 was processing and is now completed :: Array
+(
+    [new_order] => 
+    [tracking] => 
+)
+
+2021-08-22T03:49:01+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Order starts in 90 seconds :: obj_id 24123
+2021-08-22T03:49:03+00:00 NOTICE debug :: Order ID 24123 was processing and is now completed :: Array
+(
+    [new_order] => 
+    [tracking] => 
+)
+
+2021-08-22T03:49:24+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Order starts in 90 seconds :: obj_id 24124
+2021-08-22T03:49:25+00:00 NOTICE debug :: Order ID 24124 was processing and is now completed :: Array
+(
+    [new_order] => 
+    [tracking] => 
+)
+
+2021-08-22T03:50:26+00:00 ERROR order_submit.error :: addStoreOrder :: #24122 :: Error Code 404 :: Resource Not Found :: The requested resource could not be found. on 1858 in /var/www/vhosts/warmwishesflorist.com/httpdocs/wp-content/plugins/mailchimp-for-woocommerce/includes/api/class-mailchimp-api.php
+2021-08-22T03:50:29+00:00 ERROR order_submit.error :: addStoreOrder :: #24121 :: Error Code 404 :: Resource Not Found :: The requested resource could not be found. on 1858 in /var/www/vhosts/warmwishesflorist.com/httpdocs/wp-content/plugins/mailchimp-for-woocommerce/includes/api/class-mailchimp-api.php
+2021-08-22T03:50:33+00:00 ERROR order_submit.error :: addStoreOrder :: #24123 :: Error Code 404 :: Resource Not Found :: The requested resource could not be found. on 1858 in /var/www/vhosts/warmwishesflorist.com/httpdocs/wp-content/plugins/mailchimp-for-woocommerce/includes/api/class-mailchimp-api.php
+2021-08-22T03:52:30+00:00 ERROR order_submit.error :: addStoreOrder :: #24124 :: Error Code 404 :: Resource Not Found :: The requested resource could not be found. on 1858 in /var/www/vhosts/warmwishesflorist.com/httpdocs/wp-content/plugins/mailchimp-for-woocommerce/includes/api/class-mailchimp-api.php
+2021-08-22T04:23:24+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 15548
+2021-08-22T04:24:21+00:00 NOTICE member.sync :: Subscribed Member egor5f15u@list.ru :: Array
+(
+    [status_if_new] => 1
+    [merge_fields] => Array
+        (
+        )
+
+)
+
+2021-08-22T04:56:25+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 15549
+2021-08-22T04:56:35+00:00 NOTICE member.sync :: Subscribed Member arkadiyo54zol@bk.ru :: Array
+(
+    [status_if_new] => 1
+    [merge_fields] => Array
+        (
+        )
+
+)
+
+2021-08-22T07:30:28+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 15550
+2021-08-22T07:30:33+00:00 NOTICE member.sync :: hqo51merenova.88295du@gmail.com has signed up to a lot of lists very recently; we're not allowing more signups for now
+2021-08-22T07:48:41+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 15551
+2021-08-22T07:50:27+00:00 NOTICE member.sync :: kelvinwaugustshavonn@gmail.com has signed up to a lot of lists very recently; we're not allowing more signups for now
+2021-08-22T08:35:30+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 15552
+2021-08-22T08:35:37+00:00 NOTICE member.sync :: Subscribed Member chesteryn1@hiraku4410.hideo82.sorataki.in.net :: Array
+(
+    [status_if_new] => 1
+    [merge_fields] => Array
+        (
+        )
+
+)
+
+2021-08-22T09:19:08+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 15553
+2021-08-22T09:23:04+00:00 NOTICE member.sync :: gleb.zimin.15.5.1996@mail.ru has signed up to a lot of lists very recently; we're not allowing more signups for now
+2021-08-22T13:26:39+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 15554
+2021-08-22T13:28:03+00:00 NOTICE member.sync :: Subscribed Member makar1vv0ru@bk.ru :: Array
+(
+    [status_if_new] => 1
+    [merge_fields] => Array
+        (
+        )
+
+)
+
+2021-08-22T14:01:00+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 15555
+2021-08-22T14:06:15+00:00 NOTICE member.sync :: Subscribed Member timofeyejcm@bk.ru :: Array
+(
+    [status_if_new] => 1
+    [merge_fields] => Array
+        (
+        )
+
+)
+
+2021-08-22T15:53:30+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 15556
+2021-08-22T15:53:36+00:00 NOTICE member.sync :: c.v.e.tazz.z.59@gmail.com has signed up to a lot of lists very recently; we're not allowing more signups for now
+2021-08-22T18:26:45+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 15557
+2021-08-22T18:28:39+00:00 NOTICE member.sync :: romank27k@inbox.ru has signed up to a lot of lists very recently; we're not allowing more signups for now
+2021-08-22T23:34:07+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 15558
+2021-08-22T23:34:48+00:00 NOTICE member.sync :: ocs9pmrita.garmen45wgcp@gmail.com has signed up to a lot of lists very recently; we're not allowing more signups for now

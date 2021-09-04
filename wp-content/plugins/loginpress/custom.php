@@ -29,21 +29,21 @@ class LoginPress_Entities {
   */
   private function _hooks() {
 
-    add_filter( 'login_title',        array( $this, 'login_page_title' ), 99);
+    add_filter( 'login_title',        	array( $this, 'login_page_title' ), 99);
     add_filter( 'login_headerurl',		array( $this, 'login_page_logo_url' ) );
     if ( version_compare( $GLOBALS['wp_version'], '5.2', '<' ) ) {
-      add_filter( 'login_headertitle',array( $this, 'login_page_logo_title' ) );
+      add_filter( 'login_headertitle',	array( $this, 'login_page_logo_title' ) );
     } else {
       add_filter( 'login_headertext',	array( $this, 'login_page_logo_title' ) );
     }
-    add_filter( 'login_errors',			 	array( $this, 'login_error_messages' ) );
-    add_filter( 'login_message',			array( $this, 'change_welcome_message' ) );
-    add_action( 'customize_register', array( $this, 'customize_login_panel' ) );
-    add_action( 'login_footer',			 	array( $this, 'login_page_custom_footer' ) );
-    add_action( 'login_head',				 	array( $this, 'login_page_custom_head' ) );
-    add_action( 'init',							 	array( $this, 'redirect_to_custom_page' ) );
-    add_action( 'admin_menu',				 	array( $this, 'menu_url' ), 10 );
-    add_filter( 'wp_login_errors',    array( $this, 'remove_error_messages_in_wp_customizer' ), 10, 2 );
+    add_filter( 'login_errors',			array( $this, 'login_error_messages' ) );
+    add_filter( 'login_message',		array( $this, 'change_welcome_message' ) );
+    add_action( 'customize_register',	array( $this, 'customize_login_panel' ) );
+    add_action( 'login_footer',			array( $this, 'login_page_custom_footer' ) );
+    add_action( 'login_head',			array( $this, 'login_page_custom_head' ) );
+    add_action( 'init',					array( $this, 'redirect_to_custom_page' ) );
+    add_action( 'admin_menu',			array( $this, 'menu_url' ), 10 );
+    add_filter( 'wp_login_errors',    	array( $this, 'remove_error_messages_in_wp_customizer' ), 10, 2 );
 
     /**
      * This function enqueues scripts and styles in the Customizer.
@@ -1490,21 +1490,26 @@ class LoginPress_Entities {
 		// 	'priority'	      => 76,
 		// 	'settings'	      => 'loginpress_customization[show_some_love_text_color]'
 		// ) ) );
-
-		$wp_customize->add_setting( 'loginpress_customization[login_footer_copy_right]', array(
-			'default'						=> sprintf( __('© %1$s %2$s, All Rights Reserved.', 'loginpress'), date("Y"), get_bloginfo('name') ),
-			'type'							=> 'option',
-			'capability'				=> 'manage_options',
-			'transport'					=> 'postMessage',
-			'sanitize_callback'	=> 'wp_kses_post'
-			) );
-    $wp_customize->add_control( 'loginpress_customization[login_footer_copy_right]', array(
-      'label'							=> __( 'Copyright Note:', 'loginpress' ),
-      'type'							=> 'textarea',
-      'section'						=> 'section_fotter',
-      'priority'					=> 77,
-			'settings'					=> 'loginpress_customization[login_footer_copy_right]'
-			) );
+    /**
+     * [Add Copyright string in the footer along with year]
+	 * 
+     * @version 1.5.4
+     */
+	$wp_customize->add_setting( 'loginpress_customization[login_footer_copy_right]', array(
+		'default'				=> sprintf( __('© %1$s %2$s, All Rights Reserved.', 'loginpress'), '$YEAR$' , get_bloginfo('name') ),
+		'type'					=> 'option',
+		'capability'			=> 'manage_options',
+		'transport'				=> 'postMessage',
+		'sanitize_callback'		=> 'wp_kses_post'
+	) );
+	$wp_customize->add_control( 'loginpress_customization[login_footer_copy_right]', array(
+		'label'				=> __( 'Copyright Note:', 'loginpress' ),
+		'description'		=>  sprintf( __( '%1$s will be replaced with the current year.', 'loginpress' ), '<code>$YEAR$</code>' ),
+		'type'				=> 'textarea',
+		'section'			=> 'section_fotter',
+		'priority'			=> 77,
+		'settings'			=> 'loginpress_customization[login_footer_copy_right]'
+	) );
 
     /**
      * [Enable / Disabe Footer Text with LoginPress_Radio_Control]
@@ -1512,12 +1517,12 @@ class LoginPress_Entities {
      * @version 1.0.23
      */
     $wp_customize->add_control( new LoginPress_Radio_Control( $wp_customize, 'loginpress_customization[loginpress_show_love]', array(
-      'settings'    => 'loginpress_customization[loginpress_show_love]',
-  		'section'     => 'section_fotter',
-      'priority'    => 80,
-  		'type'        => 'ios',// light, ios, flat
-  		'label'	      => __( 'Show some Love. Please help others learn about this free plugin by placing small link in footer. Thank you very much!', 'loginpress' ),
-    ) ) );
+		'settings'		=> 'loginpress_customization[loginpress_show_love]',
+		'section'		=> 'section_fotter',
+		'priority'		=> 80,
+		'type'			=> 'ios', // light, ios, flat
+		'label'			=> __( 'Show some Love. Please help others learn about this free plugin by placing small link in footer. Thank you very much!', 'loginpress' ),
+	) ) );
 
     /**
      * [Love position on footer.]
@@ -1592,14 +1597,14 @@ class LoginPress_Entities {
   * Manage the Login Footer Links
   *
   * @since	1.0.0
-  * @version 1.2.2
+  * @version 1.5.4
   * * * * * * * * * * * * * * * */
   public function login_page_custom_footer() {
 
     /**
      * Add brand postion class.
      * @since 1.1.3
-     * @version 1.4.3
+     * @version 1.5.4
      */
     $position = ''; // Empty variable for storing position class.
     if ( $this->loginpress_key ) {
@@ -1623,8 +1628,19 @@ class LoginPress_Entities {
 
       if ( array_key_exists( 'login_copy_right_display', $this->loginpress_key ) && true == $this->loginpress_key['login_copy_right_display'] ) {
 
-				$footer_text = ( array_key_exists( 'login_footer_copy_right', $this->loginpress_key ) && ! empty( $this->loginpress_key['login_footer_copy_right'] ) ) ? $this->loginpress_key['login_footer_copy_right'] : sprintf( __('© %1$s %2$s, All Rights Reserved.', 'loginpress'), date("Y"), get_bloginfo('name') );
+		/**
+		 * Replace the "$YEAR$" with current year if and where found.
+		 * @since 1.5.4
+		 */
+		if( strpos( $this->loginpress_key['login_footer_copy_right'], '$YEAR$' ) !== false ) {
+			$year = date( "Y" );
+			//Setting the value with current year and saving in the 'login_footer_copy_right' key
+			$this->loginpress_key['login_footer_copy_right'] = str_replace( '$YEAR$', $year, $this->loginpress_key['login_footer_copy_right'] );
+		}
 
+		// Show a default value if not changed or show the changed text string for 'login_footer_copy_right'
+		$footer_text = ( array_key_exists( 'login_footer_copy_right', $this->loginpress_key ) && ! empty( $this->loginpress_key['login_footer_copy_right'] ) ) ? $this->loginpress_key['login_footer_copy_right'] : sprintf( __('© %1$s %2$s, All Rights Reserved.', 'loginpress' ), date( "Y" ), get_bloginfo( 'name' ) );
+		
         echo '<div class="copyRight">'. apply_filters( 'loginpress_footer_copyright', $footer_text ) .'</div>';
       }
     }
@@ -1641,14 +1657,14 @@ class LoginPress_Entities {
   * Manage the Login Head
   *
   * @since	1.0.0
-  * @version 1.2.2
+  * @version 1.5.3
   * * * * * * * * * * * */
   public function login_page_custom_head() {
 
     $loginpress_setting = get_option( 'loginpress_setting' );
     $lostpassword_url 	= isset( $loginpress_setting['lostpassword_url'] ) ? $loginpress_setting['lostpassword_url'] : 'off';
 
-		add_filter( 'gettext', array( $this, 'change_lostpassword_message' ), 20, 3 );
+	add_filter( 'gettext', array( $this, 'change_lostpassword_message' ), 20, 3 );
     add_filter( 'gettext', array( $this, 'change_username_label' ), 20, 3 );
     // add_filter( 'gettext', array( $this, 'change_password_label' ), 20, 3 );
     // Include CSS File in heared.
@@ -1664,17 +1680,31 @@ class LoginPress_Entities {
     if ( 'on' == $lostpassword_url ) {
       remove_filter( 'lostpassword_url', 'wc_lostpassword_url', 10 );
     }
+
+	/**
+	 * Filter for changing the lost password URL of lifter LMS plugin to default Lost Password URL of WordPress
+	 * By using this filter, you can prevent the redirection of lost password to Lifter LMS's lost password page over lost password link.
+	 * 
+	 * @param bool
+	 * 
+	 * @since 1.5.3
+	 */
+	if( apply_filters( 'loginpress_llms_lostpassword_url', false ) ) {
+		remove_filter( 'lostpassword_url', 'llms_lostpassword_url', 10 );
+	}
   }
   /**
   * Set Redirect Path of Logo
   *
-  * @since	1.0.0
+  * @since		1.0.0
+  * @version	1.5.3
+  *
   * @return mixed
   * * * * * * * * * * * * * */
   public function login_page_logo_url() {
 
     if ( $this->loginpress_key && array_key_exists( 'customize_logo_hover', $this->loginpress_key ) && ! empty( $this->loginpress_key['customize_logo_hover'] ) ) {
-      return $this->loginpress_key["customize_logo_hover"];
+      return __( $this->loginpress_key["customize_logo_hover"], 'loginpress' );
     } else {
       return home_url();
     }
@@ -1684,6 +1714,7 @@ class LoginPress_Entities {
   * Remove the filter login_errors from woocommerce login form.
   *
   * @since	1.0.16
+  *
   * @return errors
   * * * * * * * * * * * * */
   function loginpress_woo_login_errors( $validation_error, $arg1, $arg2 ) {
@@ -1696,13 +1727,15 @@ class LoginPress_Entities {
   /**
   * Set hover Title of Logo
   *
-  * @since	1.0.0
+  * @since		1.0.0
+  * @version	1.5.3
+  *
   * @return mixed
   * * * * * * * * * * * * */
   public function login_page_logo_title() {
 
     if ( $this->loginpress_key && array_key_exists( 'customize_logo_hover_title', $this->loginpress_key ) && ! empty( $this->loginpress_key['customize_logo_hover_title'] ) ) {
-      return $this->loginpress_key["customize_logo_hover_title"];
+      return __( $this->loginpress_key["customize_logo_hover_title"], 'loginpress' );
     } else {
       return home_url();
     }
@@ -1714,6 +1747,7 @@ class LoginPress_Entities {
   * @param	$error
   * @since	1.0.0
   * @version 1.2.5
+
   * @return string
   * * * * * * * * * * * * * * * * */
   public function login_error_messages($error) {
@@ -1775,13 +1809,14 @@ class LoginPress_Entities {
   * @param	$text
   * @since	1.0.0
   * @version 1.0.21
+
   * @return mixed
   * * * * * * * * * * * * * * * * * * */
   public function change_lostpassword_message( $translated_text, $text, $domain ) {
 
 		if ( is_array( $this->loginpress_key ) && array_key_exists( 'login_footer_text', $this->loginpress_key ) && $text == 'Lost your password?'  && 'default' == $domain && trim( $this->loginpress_key['login_footer_text'] ) ) {
 
-			return trim( $this->loginpress_key['login_footer_text'] );
+			return trim( __( $this->loginpress_key['login_footer_text'], 'logipress' ) );
 		}
 
     return $translated_text;
@@ -1791,9 +1826,11 @@ class LoginPress_Entities {
    * @param  [type] $translated_text [description]
    * @param  [type] $text            [description]
    * @param  [type] $domain          [description]
-   * @return string
    * @since 1.1.3
    * @version 1.1.7
+   * 
+   * @return string
+   * 
    */
   public function change_username_label( $translated_text, $text, $domain ){
 
@@ -1811,19 +1848,19 @@ class LoginPress_Entities {
   			return $translated_text;
   		}
 
-  		// If options exsit, then translate away.
+  		// If options exist, then translate away.
   		if ( $loginpress_setting && $default === $text ) {
 
   			// Check if the option exists.
-  			if ( '' != $login_order && 'default' != $login_order ) {
+  		if ( '' != $login_order && 'default' != $login_order ) {
           if ( 'username' == $login_order ) {
             $label = __( 'Username', 'loginpress' );
           } elseif ( 'email' == $login_order ) {
             $label = __( 'Email Address', 'loginpress' );
           } else {
-            $label = 'Username or Email Address';
+            $label = __( 'Username or Email Address', 'loginpress' );
           }
-  				$translated_text = esc_html( $label );
+  			$translated_text = esc_html( $label );
   			} else {
   				return $translated_text;
   			}
@@ -1831,45 +1868,49 @@ class LoginPress_Entities {
     }
     return $translated_text;
   }
-  /**
-   * Change Password Label from Form.
-   * @param  [type] $translated_text [description]
-   * @param  [type] $text            [description]
-   * @param  [type] $domain          [description]
-   * @return string
-   * @since 1.1.3
-   */
-  public function change_password_label( $translated_text, $text, $domain ) {
+	/**
+	 * Change Password Label from Form.
+	 * @param  [type] $translated_text [description]
+	 * @param  [type] $text            [description]
+	 * @param  [type] $domain          [description]
+	 * @since 1.1.3
+	 * 
+	 * @return string
+	 * 
+	 */
+	public function change_password_label( $translated_text, $text, $domain ) {
 
-			if ( $this->loginpress_key ) {
-        $default = 'Password';
-        $options = $this->loginpress_key;
-        $label   = array_key_exists( 'form_password_label', $options ) ? $options['form_password_label'] : '';
+		if ( $this->loginpress_key ) {
+			$default = 'Password';
+			$options = $this->loginpress_key;
+			$label   = array_key_exists( 'form_password_label', $options ) ? $options['form_password_label'] : '';
 
-  			// If the option does not exist, return the text unchanged.
-  			if ( ! $options && $default === $text ) {
-  				return $translated_text;
-  			}
+			// If the option does not exist, return the text unchanged.
+			if ( ! $options && $default === $text ) {
+				return $translated_text;
+			}
 
-  			// If options exsit, then translate away.
-  			if ( $options && $default === $text ) {
+			// If options exsit, then translate away.
+			if ( $options && $default === $text ) {
 
-  				// Check if the option exists.
-  				if ( array_key_exists( 'form_password_label', $options ) ) {
-  					$translated_text = esc_html( $label );
-  				} else {
-  					return $translated_text;
-  				}
-  			}
-      }
-      return $translated_text;
+				// Check if the option exists.
+				if ( array_key_exists( 'form_password_label', $options ) ) {
+					$translated_text = esc_html( $label );
+				} else {
+					return $translated_text;
+				}
+			}
 		}
+		return $translated_text;
+	}
 
   /**
   * Manage Welcome Messages
   *
   * @param	$message
   * @since	1.0.0
+  * @version 1.5.3
+
   * @return string
   * * * * * * * * * * * * */
   public function change_welcome_message($message) {
@@ -1881,24 +1922,24 @@ class LoginPress_Entities {
 
         if ( array_key_exists( 'logout_message', $this->loginpress_key ) && ! empty( $this->loginpress_key['logout_message'] ) ) {
 
-          $loginpress_message = $this->loginpress_key['logout_message'];
+          $loginpress_message = __( $this->loginpress_key['logout_message'], 'loginpress' );
         }
       }
 
       //Logged In messages.
-      else if ( strpos( $message, __( "Please enter your username or email address. You will receive a link to create a new password via email." ) ) == true ) {
+      else if ( isset( $_GET['action'] ) && 'lostpassword' == $_GET['action'] ) {
 
         if ( array_key_exists( 'lostpwd_welcome_message', $this->loginpress_key ) && ! empty( $this->loginpress_key['lostpwd_welcome_message'] ) ) {
 
-          $loginpress_message = $this->loginpress_key['lostpwd_welcome_message'];
+          $loginpress_message = __( $this->loginpress_key['lostpwd_welcome_message'], 'loginpress' );
         }
       }
 
-      else if( strpos( $message, __( "Register For This Site" ) ) == true ) {
+      else if( isset( $_GET['action'] ) && 'register' == $_GET['action'] ) {
 
         if ( array_key_exists( 'register_welcome_message', $this->loginpress_key ) && ! empty( $this->loginpress_key['register_welcome_message'] ) ) {
 
-          $loginpress_message = $this->loginpress_key['register_welcome_message'];
+          $loginpress_message = __( $this->loginpress_key['register_welcome_message'], 'loginpress' );
         }
       }
 
@@ -1923,10 +1964,9 @@ class LoginPress_Entities {
       else {
         if ( array_key_exists( 'welcome_message', $this->loginpress_key ) && ! empty( $this->loginpress_key['welcome_message'] ) ) {
 
-          $loginpress_message = $this->loginpress_key['welcome_message'];
+          $loginpress_message = __( $this->loginpress_key['welcome_message'], 'loginpress' );
         }
       }
-
 
       return ! empty( $loginpress_message ) ? "<p class='custom-message'>" . $loginpress_message. "</p>" : $message;
     }
@@ -1935,15 +1975,17 @@ class LoginPress_Entities {
   /**
   * Set WordPress login page title.
   *
-  * @since	1.4.6
+  * @since		1.4.6
+  * @version	1.5.3
+
   * @return string
   * * * * * * * * * * * * * * * * */
   public function login_page_title( $title ) {
 
     if ( $this->loginpress_key && array_key_exists( 'customize_login_page_title', $this->loginpress_key ) && ! empty( $this->loginpress_key['customize_login_page_title'] ) ) {
-      return $this->loginpress_key["customize_login_page_title"];
+		return __( $this->loginpress_key["customize_login_page_title"], 'loginpress' );
     } else {
-      return $title;
+    	return $title;
     }
   }
 
@@ -1959,25 +2001,25 @@ class LoginPress_Entities {
 
         if ( is_multisite() ) { // if subdirectories are used in multisite.
 
-          $loginpress_obj 	= new LoginPress();
+          	$loginpress_obj 	= new LoginPress();
       		$loginpress_page = $loginpress_obj->get_loginpress_page();
 
-					$page = get_permalink( $loginpress_page );
+			$page = get_permalink( $loginpress_page );
 
-					// Generate the redirect url.
-					$url = add_query_arg(
-						array(
-							'autofocus[panel]' => 'loginpress_panel',
-							'url'              => rawurlencode( $page ),
-						),
-						admin_url( 'customize.php' )
-					);
+			// Generate the redirect url.
+			$url = add_query_arg(
+				array(
+					'autofocus[panel]' => 'loginpress_panel',
+					'url'              => rawurlencode( $page ),
+				),
+				admin_url( 'customize.php' )
+			);
 
-					wp_safe_redirect( $url );
+			wp_safe_redirect( $url );
 
         } else {
 
-          wp_redirect( get_admin_url() . "customize.php?url=" . wp_login_url() . '&autofocus=loginpress_panel' );
+        	wp_redirect( get_admin_url() . "customize.php?url=" . wp_login_url() . '&autofocus=loginpress_panel' );
         }
       }
     }

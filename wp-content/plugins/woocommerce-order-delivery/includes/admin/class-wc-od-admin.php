@@ -58,10 +58,10 @@ if ( ! class_exists( 'WC_OD_Admin', false ) ) {
 			$suffix    = wc_od_get_scripts_suffix();
 
 			if ( 'shop_order' === $screen_id ) {
-				wp_enqueue_style( 'jquery-timepicker', WC_OD_URL . 'assets/css/lib/jquery.timepicker.css', array(), '1.11.14' );
+				wp_enqueue_style( 'jquery-timepicker', WC_OD_URL . 'assets/css/lib/jquery.timepicker.css', array(), '1.13.18' );
 				wp_enqueue_style( 'wc-od-admin', WC_OD_URL . 'assets/css/wc-od-admin.css', array( 'woocommerce_admin_styles' ), WC_OD_VERSION );
 
-				wp_enqueue_script( 'jquery-timepicker', WC_OD_URL . 'assets/js/lib/jquery.timepicker.min.js', array( 'jquery' ), '1.11.14', true );
+				wp_enqueue_script( 'jquery-timepicker', WC_OD_URL . 'assets/js/lib/jquery.timepicker.min.js', array( 'jquery' ), '1.13.18', true );
 				wp_enqueue_script( 'wc-od-admin-meta-boxes-order', WC_OD_URL . "assets/js/admin/meta-boxes-order{$suffix}.js", array( 'jquery', 'jquery-timepicker' ), WC_OD_VERSION, true );
 			}
 		}
@@ -116,10 +116,10 @@ if ( ! class_exists( 'WC_OD_Admin', false ) ) {
 					),
 					'whatsnew' => sprintf(
 						'<a href="%1$s" aria-label="%2$s">%3$s</a>',
-						esc_url( 'https://docs.woocommerce.com/document/woocommerce-order-delivery/version-1-8/' ),
+						esc_url( 'https://docs.woocommerce.com/document/woocommerce-order-delivery/version-1-9/' ),
 						esc_attr(
 							/* translators: %s plugin version */
-							sprintf( _x( 'What\'s New in WooCommerce Order Delivery %s', 'aria-label: what\'s new link', 'woocommerce-order-delivery' ), '1.8' )
+							sprintf( _x( 'What\'s New in WooCommerce Order Delivery %s', 'aria-label: what\'s new link', 'woocommerce-order-delivery' ), '1.9' )
 						),
 						esc_html_x( 'What\'s New', 'plugin row link', 'woocommerce-order-delivery' )
 					),

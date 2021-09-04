@@ -1,0 +1,83 @@
+2021-08-24T00:30:07+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 22287
+2021-08-24T00:31:08+00:00 NOTICE product_submit.error :: addStoreProduct :: #22287 :: Error Code 404 :: Resource Not Found :: The requested resource could not be found. on 1858 in /var/www/vhosts/warmwishesflorist.com/httpdocs/wp-content/plugins/mailchimp-for-woocommerce/includes/api/class-mailchimp-api.php
+2021-08-24T01:22:53+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 9570
+2021-08-24T01:24:04+00:00 NOTICE member.sync :: Updated Member nictam1126@gmail.com ( merge fields only ) :: Array
+(
+    [merge_fields] => Array
+        (
+            [FNAME] => Nic
+            [LNAME] => Tam
+        )
+
+)
+
+2021-08-24T01:49:57+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Cart_Update queued :: obj_id fb1e709f31934a39ac6ea38cdca0edb6
+2021-08-24T01:50:10+00:00 ERROR abandoned_cart.error :: email: nictam1126@gmail.com :: attempting product update :: Resource Not Found :: The requested resource could not be found.
+2021-08-24T01:50:12+00:00 NOTICE product_submit.error :: addStoreProduct :: #22750 :: Error Code 404 :: Resource Not Found :: The requested resource could not be found. on 1858 in /var/www/vhosts/warmwishesflorist.com/httpdocs/wp-content/plugins/mailchimp-for-woocommerce/includes/api/class-mailchimp-api.php
+2021-08-24T01:50:12+00:00 ERROR abandoned_cart.error :: Error Code 404 :: Resource Not Found :: The requested resource could not be found. on 1858 in /var/www/vhosts/warmwishesflorist.com/httpdocs/wp-content/plugins/mailchimp-for-woocommerce/includes/api/class-mailchimp-api.php
+2021-08-24T01:50:50+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Cart_Update queued :: obj_id fb1e709f31934a39ac6ea38cdca0edb6
+2021-08-24T01:52:05+00:00 ERROR abandoned_cart.error :: email: nictam1126@gmail.com :: attempting product update :: Resource Not Found :: The requested resource could not be found.
+2021-08-24T01:52:05+00:00 NOTICE product_submit.error :: addStoreProduct :: #5519 :: Error Code 404 :: Resource Not Found :: The requested resource could not be found. on 1858 in /var/www/vhosts/warmwishesflorist.com/httpdocs/wp-content/plugins/mailchimp-for-woocommerce/includes/api/class-mailchimp-api.php
+2021-08-24T01:52:05+00:00 ERROR abandoned_cart.error :: Error Code 404 :: Resource Not Found :: The requested resource could not be found. on 1858 in /var/www/vhosts/warmwishesflorist.com/httpdocs/wp-content/plugins/mailchimp-for-woocommerce/includes/api/class-mailchimp-api.php
+2021-08-24T01:59:04+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 9570
+2021-08-24T01:59:05+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Order starts in 90 seconds :: obj_id 24125
+2021-08-24T01:59:08+00:00 NOTICE member.sync :: Updated Member nictam1126@gmail.com ( merge fields only ) :: Array
+(
+    [merge_fields] => Array
+        (
+            [FNAME] => Nic
+            [LNAME] => Tam
+        )
+
+)
+
+2021-08-24T02:00:45+00:00 NOTICE debug :: Order ID 24125 was pending and is now processing :: Array
+(
+    [new_order] => 1
+    [tracking] => Array
+        (
+            [campaign_id] => 
+            [landing_site] => https://warmwishesflorist.com/?wc-api=WC_Molpay_Gateway
+        )
+
+)
+
+2021-08-24T02:02:39+00:00 ERROR order_submit.error :: addStoreOrder :: #24125 :: Error Code 404 :: Resource Not Found :: The requested resource could not be found. on 1858 in /var/www/vhosts/warmwishesflorist.com/httpdocs/wp-content/plugins/mailchimp-for-woocommerce/includes/api/class-mailchimp-api.php
+2021-08-24T02:10:31+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 5519
+2021-08-24T02:12:40+00:00 NOTICE product_submit.error :: addStoreProduct :: #5519 :: Error Code 404 :: Resource Not Found :: The requested resource could not be found. on 1858 in /var/www/vhosts/warmwishesflorist.com/httpdocs/wp-content/plugins/mailchimp-for-woocommerce/includes/api/class-mailchimp-api.php
+2021-08-24T06:53:07+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 15573
+2021-08-24T06:53:35+00:00 NOTICE member.sync :: andreylebowsky02@gmail.com has signed up to a lot of lists very recently; we're not allowing more signups for now
+2021-08-24T08:29:26+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 15574
+2021-08-24T08:29:36+00:00 NOTICE member.sync :: dudrojsk2018@yandex.ru has signed up to a lot of lists very recently; we're not allowing more signups for now
+2021-08-24T10:18:48+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 15575
+2021-08-24T10:19:46+00:00 NOTICE member.sync :: alexseo@mailtopi.com has signed up to a lot of lists very recently; we're not allowing more signups for now
+2021-08-24T14:53:27+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 15576
+2021-08-24T14:53:37+00:00 NOTICE member.sync :: Subscribed Member alejandralp5@hiraku4410.hideo82.sorataki.in.net :: Array
+(
+    [status_if_new] => 1
+    [merge_fields] => Array
+        (
+        )
+
+)
+
+2021-08-24T16:10:43+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 9273
+2021-08-24T16:10:55+00:00 NOTICE product_submit.error :: addStoreProduct :: #9273 :: Error Code 404 :: Resource Not Found :: The requested resource could not be found. on 1858 in /var/www/vhosts/warmwishesflorist.com/httpdocs/wp-content/plugins/mailchimp-for-woocommerce/includes/api/class-mailchimp-api.php
+2021-08-24T16:16:14+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 24127
+2021-08-24T16:16:40+00:00 NOTICE product_submit.warning :: addStoreProduct :: post #24127 was invalid.
+2021-08-24T16:16:49+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 24127
+2021-08-24T16:17:04+00:00 NOTICE product_submit.warning :: addStoreProduct :: post #24127 was invalid.
+2021-08-24T16:18:50+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_Single_Product starts in 5 seconds :: obj_id 24127
+2021-08-24T16:19:17+00:00 NOTICE product_submit.error :: addStoreProduct :: #24127 :: Error Code 404 :: Resource Not Found :: The requested resource could not be found. on 1858 in /var/www/vhosts/warmwishesflorist.com/httpdocs/wp-content/plugins/mailchimp-for-woocommerce/includes/api/class-mailchimp-api.php
+2021-08-24T18:47:17+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 15577
+2021-08-24T18:48:08+00:00 NOTICE member.sync :: oliveriddle90@gmail.com has signed up to a lot of lists very recently; we're not allowing more signups for now
+2021-08-24T22:54:05+00:00 NOTICE action_scheduler.queue_job :: MailChimp_WooCommerce_User_Submit queued :: obj_id 15578
+2021-08-24T22:55:40+00:00 NOTICE member.sync :: Subscribed Member nastya.tolstikova.81@inbox.ru :: Array
+(
+    [status_if_new] => 1
+    [merge_fields] => Array
+        (
+        )
+
+)
+

@@ -1,7 +1,6 @@
 <?php
-define('DISABLE_WP_CRON', true);
-define('WP_CACHE_KEY_SALT', '3d8d2ea04a7a8eb9d1c6c473066f6ac4');
-define('WP_AUTO_UPDATE_CORE', 'minor');// This setting is required to make sure that WordPress updates can be properly managed in WordPress Toolkit. Remove this line if this WordPress website is not managed by WordPress Toolkit anymore.
+define('WP_CACHE_KEY_SALT', 'ed281ebec47a328b92760bca76428010');
+// This setting is required to make sure that WordPress updates can be properly managed in WordPress Toolkit. Remove this line if this WordPress website is not managed by WordPress Toolkit anymore.
 define('CONCATENATE_SCRIPTS', false);
 define('DISALLOW_FILE_EDIT', true);
 define('WP_CACHE', false);
@@ -27,13 +26,13 @@ define('WP_CACHE', false);
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'wwf_live');
+define('DB_NAME', 'wwf_live3');
 
 /** MySQL database username */
-define('DB_USER', 'wp_d7ohr');
+define('DB_USER', 'wp_3l8gr');
 
 /** MySQL database password */
-define('DB_PASSWORD', '4az8X2Cu#G');
+define('DB_PASSWORD', 'Nk!28Z0wlX~M@9lD');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost:3306');
@@ -53,14 +52,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY', 'P)2(#-4%f&raV#Q;co4PnT+!fWb63u*r](H)b&|LR[/O4V)85;MqkJHMv7I+A7S-');
-define('SECURE_AUTH_KEY', 'D3(P~7ft+13Sn8sa%m#7r|k_mva+SU1R86D/:0fjrN6VJo84@81Q39kFvwLV/5QC');
-define('LOGGED_IN_KEY', 'K)|%weX@5mP8&8IE9Q6YT|y2@;haOD7YY(o-c%M!%09|Xi7z6v15f/@MYlP&]09&');
-define('NONCE_KEY', '2|Nf1@)q5fHQOpVvp:Q#)2(fD|~cTLv]!9A8xz#e[en/jL808n4NV2a+(HTn5Ks3');
-define('AUTH_SALT', '%DRubU4d%H!3A4d8&!Bt[62T/2T4RkCnJQ6|I[Yu_d+H2Qk85o5#/cOn%/;9CJwX');
-define('SECURE_AUTH_SALT', 'sa]j1KYKcZCo%v]]&:8tuk5%~A3UaCtCYP)qaqX-|!1r4ES#ulAn+P4V%5-%gNrM');
-define('LOGGED_IN_SALT', 'LVICGm]/-E072L5mZQ6H08vQP50ed#0bC14AS3p3xvnU_@+-ixcz##Am[890q[5V');
-define('NONCE_SALT', 'cv3G[Bdn+(x/(w@2&YnD+6E46ZD8hxx#c)vYEC#1_0J5Z[Dw!3_8P1]4*5R4U|!~');
+define('AUTH_KEY', '8O|!3:Gn9b-2SZy*kVu|J7yj)]9[hpB7NeN0zQ:3HX;|Aai@2tTt*m)5sh!Pe)t7');
+define('SECURE_AUTH_KEY', 'dUr4pn_3fS)WcGQoK7C:9XT2Ps7(i2#10Adn/+1593/[~o80/CU3#8;T!q1j+V+%');
+define('LOGGED_IN_KEY', ')J]9im_42//B7&Vbj#7H667Mp]ag@4e3l)Uwb8~19uE/I]f1o3q!Ei3(Z3]C8+&:');
+define('NONCE_KEY', 'aw4Ea60eo#ka6:AY0/)Az~j6kGyZK1-x8+mUGwA!7mA3CanPjN9TB+6pZx47E[tf');
+define('AUTH_SALT', '5K2-(6x7QT)|[tR)+k|A78-vMqcmpeM0vrDCc+rt8[y43MWe0s[ulV2##iWIenEa');
+define('SECURE_AUTH_SALT', 'Ao1r4:Sf%nLC:74bOXOLB!q:E;;o/~Pk|;2f0|i61@eoQhns&N41OyCnI3:G0J8S');
+define('LOGGED_IN_SALT', '4BCC/z4a)]/a_2x%55Te2oM7Bl~2SCDzo+#0T#8:n~zWW5X%04pBe6/1(is1[UF4');
+define('NONCE_SALT', 'y7P1Vg7WL8-cy2EL0[SpVYpT@92C2-9X7F~-sd97;~]0f(CU99kBu9t]](R:ZL~n');
 
 /**
  * Other customizations.
@@ -98,6 +97,7 @@ $table_prefix  = "wwf_";
  */
 define('WP_DEBUG', false);
 
+define( 'DISABLE_WP_CRON', true );
 /* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */
